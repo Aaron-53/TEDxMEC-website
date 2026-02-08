@@ -16,6 +16,7 @@ import Gallery from "./sections/Gallery";
 import Team from "./sections/Team";
 import FAQ from "./sections/FAQ";
 import Footer from "./sections/Footer";
+import Page from "./sections/Hero_Container";
 
 function App() {
   useEffect(() => {
@@ -33,33 +34,35 @@ function App() {
   }, []);
 
   return (
-    <div className="relative bg-tedx-charcoal">
-      {/* Noise Overlay */}
-      <div className="noise-overlay" />
+  <div className="relative bg-tedx-charcoal">
 
-      {/* Navigation */}
-      <Navigation />
+    {/* Plasma background layer */}
+    <Page />
 
-      {/* Main Content */}
-      <main className="relative">
-        {/* Pinned Sections (z-index stacking) */}
-        <Hero />
-        <Tickets />
-        <About />
-        <Speakers />
-        <Experience />
-        <Community />
-        <Performances />
-        <Partners />
+    {/* Noise Overlay */}
+    <div className="noise-overlay" />
 
-        {/* Flowing Sections */}
-        <Gallery />
-        <Team />
-        <FAQ />
-        <Footer />
-      </main>
-    </div>
-  );
+    {/* Navigation */}
+    <Navigation />
+
+    {/* Main Content */}
+    <main className="relative z-10">
+      <Hero />
+      <Tickets />
+      <About />
+      <Speakers />
+      <Experience />
+      <Community />
+      <Performances />
+      <Partners />
+      <Gallery />
+      <Team />
+      <FAQ />
+      <Footer />
+    </main>
+  </div>
+);
+
 }
 
 export default App;
