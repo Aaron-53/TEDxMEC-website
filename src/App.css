@@ -1,0 +1,63 @@
+/* App-specific styles */
+
+/* Ensure smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow */
+body {
+  overflow-x: hidden;
+}
+
+/* Section stacking for pinned sections */
+.section-pinned {
+  will-change: transform;
+}
+
+/* Image loading optimization */
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Button hover states */
+.btn-tedx:active,
+.btn-tedx-outline:active {
+  transform: translateY(0);
+}
+
+/* Card hover lift effect */
+.ticket-card,
+.pillar-card,
+.team-card {
+  will-change: transform;
+}
+
+/* Gallery item hover */
+.gallery-item {
+  will-change: transform;
+}
+
+/* FAQ accordion smooth transition */
+.faq-item {
+  will-change: max-height;
+}
+
+/* Mobile menu animation */
+@media (max-width: 1024px) {
+  .mobile-menu-item {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

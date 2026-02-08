@@ -1,0 +1,123 @@
+import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
+
+const navLinks = [
+  { label: 'About', href: '#about' },
+  { label: 'Speakers', href: '#speakers' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Partners', href: '#partners' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'Team', href: '#team' },
+  { label: 'Contact', href: '#contact' },
+];
+
+export default function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <>
+      <nav 
+        className={`fixed top-0 left-0 right-0 z-[200] transition-all duration-500 ${
+          isScrolled 
+            ? 'bg-tedx-charcoal/90 backdrop-blur-md border-b border-tedx-white/10' 
+            : 'bg-transparent'
+        }`}
+      >
+        <div className="flex items-center justify-between px-[6vw] py-4">
+          {/* Logo */}
+          <a href="#hero" className="flex items-center gap-2">
+            <span className="font-sora font-bold text-xl text-tedx-white">
+              TEDx<span className="text-tedx-red">MEC</span>
+            </span>
+          </a>
+
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="font-mono text-xs uppercase tracking-wider text-tedx-gray hover:text-tedx-white transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a 
+              href="#tickets"
+              onClick={(e) => handleNavClick(e, '#tickets')}
+              className="px-4 py-2 bg-tedx-red text-white font-mono text-xs uppercase tracking-wider rounded-md hover:shadow-glow transition-all"
+            >
+              Get Tickets
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden w-10 h-10 flex items-center justify-center text-tedx-white"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      <div 
+        className={`fixed inset-0 z-[199] bg-tedx-charcoal/98 backdrop-blur-lg transition-all duration-500 lg:hidden ${
+          isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center h-full gap-8">
+          {navLinks.map((link, idx) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="font-sora font-semibold text-2xl text-tedx-white hover:text-tedx-red transition-colors"
+              style={{ 
+                transitionDelay: isMobileMenuOpen ? `${idx * 50}ms` : '0ms',
+                transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                opacity: isMobileMenuOpen ? 1 : 0,
+              }}
+            >
+              {link.label}
+            </a>
+          ))}
+          <a 
+            href="#tickets"
+            onClick={(e) => handleNavClick(e, '#tickets')}
+            className="mt-4 px-8 py-4 bg-tedx-red text-white font-sora font-semibold uppercase tracking-wider rounded-md"
+            style={{ 
+              transitionDelay: isMobileMenuOpen ? `${navLinks.length * 50}ms` : '0ms',
+              transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+              opacity: isMobileMenuOpen ? 1 : 0,
+            }}
+          >
+            Get Tickets
+          </a>
+        </div>
+      </div>
+    </>
+  );
+}
