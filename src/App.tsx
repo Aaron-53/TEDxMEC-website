@@ -46,8 +46,7 @@ function App() {
     <Navigation />
 
     {/* Main Content */}
-    <main className="relative z-10">
-      <Hero />
+    <main className="relative z-10 bg-black">
       <Tickets />
       <About />
       <Speakers />
