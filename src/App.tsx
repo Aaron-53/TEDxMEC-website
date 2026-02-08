@@ -4,7 +4,6 @@ import "aos/dist/aos.css";
 import "./App.css";
 
 import Navigation from "./components/Navigation";
-import Hero from "./sections/Hero";
 import Tickets from "./sections/Tickets";
 import About from "./sections/About";
 import Speakers from "./sections/Speakers";
