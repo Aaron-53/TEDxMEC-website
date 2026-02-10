@@ -1,10 +1,8 @@
 import PlasmaHero from "@/components/plasma";
 import { useState } from "react";
 export default function Hero() {
-const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    setIsMobileMenuOpen(false);
     
     const target = document.querySelector(href);
     if (target) {
