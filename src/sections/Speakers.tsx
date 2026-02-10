@@ -17,7 +17,7 @@ export default function Speakers() {
       {/* Background Image */}
       <div
         className="absolute inset-0 w-full h-full"
-        data-aos="fade-right"
+        data-aos="fade-right" 
         data-aos-duration="1200"
       >
         <img
