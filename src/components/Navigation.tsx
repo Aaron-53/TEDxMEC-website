@@ -25,60 +25,62 @@ export default function Navigation() {
   };
 
   return (
-    <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-[200] transition-all duration-500 m-5 rounded-[14px] bg-tedx-charcoal/90 backdrop-blur-md border-b border-tedx-white/10`}
-      >
-        <div className="flex items-center justify-between px-10 py-4">
-          {/* Logo */}
-          <a href="#hero" className="flex items-center gap-2">
-            <img 
-              src="/tedxmec white.svg" 
-              alt="TEDxMEC" 
-              className="h-8 w-auto"
-            />
-          </a>
-
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="font-mono text-xs uppercase tracking-wider text-tedx-gray hover:text-tedx-white transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-          <div className="hidden lg:flex items-center gap-8">
-            <a
-              href="#tickets"
-              onClick={(e) => handleNavClick(e, "#tickets")}
-              className="px-4 py-2 bg-tedx-red text-white font-mono text-xs uppercase tracking-wider rounded-md hover:shadow-glow transition-all"
-            >
-              Get Tickets
+    <div className="relative z-20 w-screen">
+      <div className="flex w-screen fixed top-0 left-0  z-[200]">
+        <nav
+          className={` transition-all flex-grow duration-500 m-5 rounded-[14px] bg-tedx-charcoal/90 backdrop-blur-md border-b border-tedx-white/10`}
+        >
+          <div className="flex items-center justify-between px-10 py-4">
+            {/* Logo */}
+            <a href="#hero" className="flex items-center gap-2">
+              <img
+                src="/tedxmec white.svg"
+                alt="TEDxMEC"
+                className="h-8 w-auto"
+              />
             </a>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden w-10 h-10 flex items-center justify-center text-tedx-white"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
-        </div>
-      </nav>
+            {/* Desktop Nav */}
+            <div className="hidden lg:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="font-mono text-xs uppercase tracking-wider text-tedx-gray hover:text-tedx-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+            <div className="hidden lg:flex items-center gap-8">
+              <a
+                href="#tickets"
+                onClick={(e) => handleNavClick(e, "#tickets")}
+                className="px-4 py-2 bg-tedx-red text-white font-mono text-xs uppercase tracking-wider rounded-md hover:shadow-glow transition-all"
+              >
+                Get Tickets
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden w-10 h-10 flex items-center justify-center text-tedx-white"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
+        </nav>
+      </div>
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-[199] bg-tedx-charcoal/98 backdrop-blur-lg transition-all duration-500 lg:hidden ${
+        className={`fixed w-screen inset-0 z-[199] bg-tedx-charcoal/98 backdrop-blur-lg transition-all duration-500 lg:hidden ${
           isMobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -120,6 +122,6 @@ export default function Navigation() {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -9,7 +9,7 @@ const performances = [
 export default function Performances() {
   return (
     <section
-      className="min-h-screen relative z-[60] flex items-center"
+      className="min-h-screen relative z-[60] flex items-center py-24 lg:py-0"
       id="performances"
     >
       {/* Background Image */}
@@ -21,25 +21,17 @@ export default function Performances() {
         <img
           src="/performances_hall.jpg"
           alt="Performances"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center lg:object-left"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-tedx-black/80 via-tedx-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-tedx-black/80 via-tedx-black/50 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center px-[6vw]">
+      <div className="relative z-10 h-full flex flex-col lg:flex-row items-center lg:items-start px-[6vw] gap-12 lg:gap-0">
         {/* Left Text */}
-        <div className="max-w-[44vw]">
-          <span
-            className="micro-label mb-4 block"
-            data-aos="fade-right"
-            data-aos-delay="200"
-          >
-            PERFORMANCES
-          </span>
-
+        <div className="w-full lg:max-w-[44vw] text-center lg:text-left">
           <h2
-            className="headline-lg text-tedx-white mb-6"
+            className="headline-lg text-tedx-white mb-4 lg:mb-6"
             data-aos="fade-right"
             data-aos-delay="300"
           >
@@ -49,7 +41,7 @@ export default function Performances() {
           </h2>
 
           <p
-            className="body-text text-lg"
+            className="body-text text-base lg:text-lg"
             data-aos="fade-right"
             data-aos-delay="400"
           >
@@ -60,27 +52,27 @@ export default function Performances() {
 
         {/* Right Performance Card */}
         <div
-          className="absolute right-[6vw] top-1/2 -translate-y-1/2 w-[32vw]"
+          className="w-full lg:w-[32vw] lg:absolute lg:right-[6vw] lg:top-1/2 lg:-translate-y-1/2"
           data-aos="fade-left"
           data-aos-delay="500"
         >
-          <div className="bg-tedx-white/5 backdrop-blur-sm border border-tedx-white/10 rounded-lg p-8">
-            <span className="font-mono text-xs uppercase tracking-[0.14em] text-tedx-gray mb-6 block">
+          <div className="bg-tedx-charcoal/95 border border-tedx-white/20 rounded-lg p-6 lg:p-8 shadow-2xl">
+            <span className="font-mono text-xs uppercase tracking-[0.14em] text-tedx-gray mb-4 lg:mb-6 block">
               LIVE SETS
             </span>
 
-            <div className="space-y-4">
+            <div className="space-y-3 lg:space-y-4">
               {performances.map((perf, idx) => (
                 <div
                   key={idx}
-                  className="perf-item flex items-center gap-4 p-4 bg-tedx-white/5 rounded-lg hover:bg-tedx-white/10 transition-colors"
+                  className="perf-item flex items-center gap-3 lg:gap-4 p-3 lg:p-4 bg-tedx-black/80 border border-tedx-white/10 rounded-lg hover:bg-tedx-red/10 hover:border-tedx-red/30 transition-all duration-300"
                   data-aos="fade-up"
                   data-aos-delay={600 + idx * 100}
                 >
-                  <div className="w-10 h-10 bg-tedx-red/20 rounded-lg flex items-center justify-center">
-                    <perf.icon className="w-5 h-5 text-tedx-red" />
+                  <div className="w-8 h-8 lg:w-10 lg:h-10 bg-tedx-red rounded-lg flex items-center justify-center shadow-lg">
+                    <perf.icon className="w-4 h-4 lg:w-5 lg:h-5 text-white" />
                   </div>
-                  <span className="text-tedx-white font-medium">
+                  <span className="text-tedx-white font-medium text-sm lg:text-base">
                     {perf.label}
                   </span>
                 </div>

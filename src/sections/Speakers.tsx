@@ -13,35 +13,27 @@ const speakers = [
 
 export default function Speakers() {
   return (
-    <section className="min-h-screen relative z-30" id="speakers">
+    <section className="min-h-screen relative z-30 py-24 lg:py-0" id="speakers">
       {/* Background Image */}
       <div
         className="absolute inset-0 w-full h-full"
-        data-aos="fade-right" 
+        data-aos="fade-right"
         data-aos-duration="1200"
       >
         <img
           src="/speakers_corridor.jpg"
           alt="Lineup"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center lg:object-left"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-tedx-black/80 via-tedx-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-tedx-black/80 via-tedx-black/50 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center px-[6vw]">
+      <div className="relative z-10 h-full flex flex-col lg:flex-row items-center lg:items-start px-[6vw] gap-12 lg:gap-0">
         {/* Left Text */}
-        <div className="max-w-[40vw]">
-          <span
-            className="micro-label mb-4 block"
-            data-aos="fade-right"
-            data-aos-delay="200"
-          >
-            SPEAKERS
-          </span>
-
+        <div className="w-full lg:max-w-[40vw] text-center lg:text-left">
           <h2
-            className="headline-lg text-tedx-white mb-6"
+            className="headline-lg text-tedx-white mb-4 lg:mb-6"
             data-aos="fade-right"
             data-aos-delay="300"
           >
@@ -51,7 +43,7 @@ export default function Speakers() {
           </h2>
 
           <p
-            className="body-text text-lg"
+            className="body-text text-base lg:text-lg"
             data-aos="fade-right"
             data-aos-delay="400"
           >
@@ -62,16 +54,16 @@ export default function Speakers() {
 
         {/* Right Speaker Card */}
         <div
-          className="absolute right-[6vw] top-1/2 -translate-y-1/2 w-[34vw] min-h-[34vh]"
+          className="w-full lg:w-[34vw] lg:min-h-[34vh] lg:absolute lg:right-[6vw] lg:top-1/2 lg:-translate-y-1/2"
           data-aos="fade-left"
           data-aos-delay="500"
         >
-          <div className="bg-tedx-white/5 backdrop-blur-sm border border-tedx-white/10 rounded-lg p-8">
-            <span className="card-title font-mono text-xs uppercase tracking-[0.14em] text-tedx-gray mb-6 block">
+          <div className="bg-tedx-charcoal/95 border border-tedx-white/20 rounded-lg p-6 lg:p-8 shadow-2xl">
+            <span className="card-title font-mono text-xs uppercase tracking-[0.14em] text-tedx-gray mb-4 lg:mb-6 block">
               2025 SPEAKERS
             </span>
 
-            <div className="speaker-list grid grid-cols-2 gap-x-8 gap-y-4">
+            <div className="speaker-list grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-3 lg:gap-y-4">
               {speakers.map((speaker, idx) => (
                 <div
                   key={idx}
@@ -92,7 +84,7 @@ export default function Speakers() {
 
             <a
               href="#"
-              className="inline-flex items-center gap-2 mt-8 text-tedx-red font-mono text-sm uppercase tracking-wider hover:underline"
+              className="inline-flex items-center gap-2 mt-6 lg:mt-8 text-tedx-red font-mono text-sm uppercase tracking-wider hover:underline"
               data-aos="fade-up"
               data-aos-delay="1000"
             >

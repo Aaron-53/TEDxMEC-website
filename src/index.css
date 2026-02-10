@@ -36,10 +36,18 @@
   
   html {
     scroll-behavior: smooth;
+    width: 100%;
+    min-width: 100%;
   }
   
   body {
     @apply bg-tedx-charcoal text-tedx-white font-inter antialiased;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  main {
     overflow-x: hidden;
   }
   
@@ -74,7 +82,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     pointer-events: none;
     z-index: 9999;
     opacity: 0.03;
@@ -82,7 +90,7 @@
   }
   
   .section-pinned {
-    @apply relative w-screen h-screen overflow-hidden;
+    @apply relative w-full h-screen overflow-hidden;
   }
   
   .btn-tedx {
@@ -113,6 +121,16 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  
+  .main-container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
   }
 }
 

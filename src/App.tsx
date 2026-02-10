@@ -23,44 +23,44 @@ function App() {
     AOS.init({
       duration: 800,
       easing: "ease-out-cubic",
-      once: true, // Animation happens only once
-      offset: 100,
+      once: true,
+      offset: 50,
       delay: 0,
+      disable: false,
+      startEvent: "DOMContentLoaded",
     });
 
-    // Refresh AOS when needed
-    AOS.refresh();
+    // Refresh AOS after initialization
+    setTimeout(() => AOS.refresh(), 100);
   }, []);
 
   return (
-  <div className="relative bg-tedx-charcoal">
+    <div className="main-container relative bg-tedx-charcoal min-h-screen w-full m-0 p-0">
+      {/* Plasma background layer */}
 
-    {/* Plasma background layer */}
+      {/* Noise Overlay */}
+      <div className="noise-overlay w-full right-0" />
 
-    {/* Noise Overlay */}
-    <div className="noise-overlay" />
+      {/* Navigation */}
+      <Navigation />
 
-    {/* Navigation */}
-    <Navigation />
-
-    {/* Main Content */}
-    <main className="relative z-10 bg-black">
-      <Hero />
-      <Tickets />
-      <About />
-      <Speakers />
-      <Experience />
-      <Community />
-      <Performances />
-      <Partners />
-      <Gallery />
-      <Team />
-      <FAQ />
-      <Footer />
-    </main>
-  </div>
-);
-
+      {/* Main Content */}
+      <main className="relative z-10 w-full bg-black">
+        <Hero />
+        <Tickets />
+        <About />
+        <Speakers />
+        <Experience />
+        <Community />
+        <Performances />
+        <Partners />
+        <Gallery />
+        <Team />
+        <FAQ />
+        <Footer />
+      </main>
+    </div>
+  );
 }
 
 export default App;

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 export default function About() {
   return (
     <section
-      className="min-h-screen relative z-20 flex items-center"
+      className="min-h-screen relative z-20 flex items-center py-24 lg:py-0"
       id="about"
     >
       {/* Background Image */}
@@ -15,30 +15,22 @@ export default function About() {
         <img
           src="/about_stairwell.jpg"
           alt="Ascent"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center lg:object-right"
         />
       </div>
 
       {/* Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-l from-tedx-charcoal/90 via-tedx-charcoal/60 to-transparent"
+        className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-l from-tedx-charcoal/90 via-tedx-charcoal/60 to-transparent"
         data-aos="fade-in"
         data-aos-duration="800"
       />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center items-end text-right px-[6vw]">
-        <div className="max-w-[38vw]">
-          <span
-            className="micro-label mb-4 block"
-            data-aos="fade-left"
-            data-aos-delay="200"
-          >
-            ABOUT
-          </span>
-
+      <div className="relative z-10 h-full flex flex-col justify-center items-center lg:items-end text-center lg:text-right px-[6vw]">
+        <div className="w-full lg:max-w-[38vw]">
           <h2
-            className="headline-lg text-tedx-white mb-8"
+            className="headline-lg text-tedx-white mb-6 lg:mb-8"
             data-aos="fade-left"
             data-aos-delay="300"
           >
@@ -48,7 +40,7 @@ export default function About() {
           </h2>
 
           <p
-            className="body-text mb-8 text-lg"
+            className="body-text mb-6 lg:mb-8 text-base lg:text-lg"
             data-aos="fade-left"
             data-aos-delay="400"
           >
@@ -64,7 +56,7 @@ export default function About() {
 
           <a
             href="#speakers"
-            className="btn-tedx-outline inline-flex group"
+            className="btn-tedx-outline inline-flex group w-full lg:w-auto justify-center lg:justify-start"
             data-aos="fade-left"
             data-aos-delay="500"
           >

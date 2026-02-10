@@ -19,30 +19,22 @@ export default function Partners() {
         <img
           src="/partners_stairwell.jpg"
           alt="Partners"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center lg:object-right"
         />
       </div>
 
       {/* Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-l from-tedx-charcoal/90 via-tedx-charcoal/60 to-transparent"
+        className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-l from-tedx-charcoal/90 via-tedx-charcoal/60 to-transparent"
         data-aos="fade-in"
         data-aos-duration="800"
       />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center items-end text-right px-[6vw]">
-        <div className="max-w-[40vw]">
-          <span
-            className="micro-label mb-4 block"
-            data-aos="fade-left"
-            data-aos-delay="200"
-          >
-            PARTNERS
-          </span>
-
+      <div className="relative z-10 h-full flex flex-col justify-center items-center lg:items-end text-center lg:text-right px-[6vw] py-24 lg:py-0">
+        <div className="max-w-full lg:max-w-[40vw] w-full">
           <h2
-            className="headline-lg text-tedx-white mb-8"
+            className="headline-lg text-tedx-white mb-6 lg:mb-8"
             data-aos="fade-left"
             data-aos-delay="300"
           >
@@ -52,7 +44,7 @@ export default function Partners() {
           </h2>
 
           <p
-            className="body-text mb-8 text-lg"
+            className="body-text mb-6 lg:mb-8 text-base lg:text-lg"
             data-aos="fade-left"
             data-aos-delay="400"
           >
@@ -62,30 +54,33 @@ export default function Partners() {
 
           {/* CTAs */}
           <div
-            className="cta-group flex flex-col sm:flex-row gap-4 mb-10 justify-end"
+            className="cta-group flex flex-col lg:flex-row gap-3 lg:gap-4 mb-8 lg:mb-10 justify-center lg:justify-end"
             data-aos="fade-left"
             data-aos-delay="500"
           >
-            <button className="btn-tedx group">
+            <button className="btn-tedx group w-full lg:w-auto">
               <Download className="mr-2 w-4 h-4" />
               Download Brochure
             </button>
-            <a href="mailto:partners@tedxmec.in" className="btn-tedx-outline">
+            <a
+              href="mailto:partners@tedxmec.in"
+              className="btn-tedx-outline w-full lg:w-auto"
+            >
               <Mail className="mr-2 w-4 h-4" />
               Contact for Sponsorship
             </a>
           </div>
 
           {/* Partner Logos */}
-          <div className="flex gap-6 justify-end">
+          <div className="flex flex-wrap gap-4 lg:gap-6 justify-center lg:justify-end">
             {partnerLogos.map((partner, idx) => (
               <div
                 key={idx}
-                className="partner-logo w-14 h-14 bg-tedx-white/10 rounded-lg flex items-center justify-center hover:bg-tedx-white/20 transition-colors"
+                className="partner-logo w-12 h-12 lg:w-14 lg:h-14 bg-tedx-white/10 rounded-lg flex items-center justify-center hover:bg-tedx-white/20 transition-colors"
                 data-aos="fade-up"
                 data-aos-delay={600 + idx * 100}
               >
-                <partner.icon className="w-6 h-6 text-tedx-gray" />
+                <partner.icon className="w-5 h-5 lg:w-6 lg:h-6 text-tedx-gray" />
               </div>
             ))}
           </div>
