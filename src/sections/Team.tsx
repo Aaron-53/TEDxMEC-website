@@ -1,49 +1,100 @@
 const teamMembers = [
   {
-    name: "Rahul Kumar",
+    name: "Sahiba",
     role: "Licensee",
     dept: "Leadership",
     image: "/team_1.jpg",
   },
   {
-    name: "Ananya Singh",
-    role: "Curator",
-    dept: "Curation",
+    name: "Mary",
+    role: "Co-organizer",
+    dept: "Leadership",
     image: "/team_2.jpg",
   },
   {
-    name: "Vikram Patel",
-    role: "Design Lead",
-    dept: "Design",
+    name: "Sara",
+    role: "Head of Operations",
+    dept: "Operations",
     image: "/team_3.jpg",
   },
   {
-    name: "Priya Sharma",
+    name: "Jahfer",
+    role: "Program Director",
+    dept: "Programs",
+    image: "/team_4.jpg",
+  },
+  {
+    name: "Aaditya",
+    role: "Production Head",
+    dept: "Production",
+    image: "/team_5.jpg",
+  },
+  { name: "Ijlal", role: "Design Head", dept: "Design", image: "/team_6.jpg" },
+  {
+    name: "Aibel",
+    role: "Head of Creatives",
+    dept: "Creatives",
+    image: "/team_7.jpg",
+  },
+  { name: "Aaron", role: "Tech Lead", dept: "Tech", image: "/team_8.jpg" },
+
+  {
+    name: "Joanna",
+    role: "Head of Curation",
+    dept: "Curation",
+    image: "/team_1.jpg",
+  },
+  {
+    name: "Theertha",
+    role: "Cultural Head",
+    dept: "Culture",
+    image: "/team_2.jpg",
+  },
+  { name: "Sheez", role: "Events Lead", dept: "Events", image: "/team_3.jpg" },
+  {
+    name: "Kamala",
     role: "Marketing Head",
     dept: "Marketing",
     image: "/team_4.jpg",
   },
   {
-    name: "Arjun Menon",
-    role: "Logistics Lead",
-    dept: "Logistics",
+    name: "Anagha",
+    role: "Content Head",
+    dept: "Content",
     image: "/team_5.jpg",
   },
   {
-    name: "Neha Gupta",
-    role: "Finance Head",
-    dept: "Finance",
+    name: "Antony",
+    role: "Volunteers Lead",
+    dept: "Volunteers",
     image: "/team_6.jpg",
   },
-  { name: "Karan Shah", role: "Tech Lead", dept: "Tech", image: "/team_7.jpg" },
   {
-    name: "Maya Reddy",
-    role: "Creative Director",
-    dept: "Design",
+    name: "Aadil",
+    role: "Speaker Head",
+    dept: "Speakers",
+    image: "/team_7.jpg",
+  },
+  {
+    name: "Anjali",
+    role: "Hospitality Manager",
+    dept: "Hospitality",
     image: "/team_8.jpg",
   },
-];
 
+  {
+    name: "Nimah",
+    role: "Ambience Head",
+    dept: "Ambience",
+    image: "/team_1.jpg",
+  },
+  {
+    name: "Aisha",
+    role: "Outreach Head",
+    dept: "Outreach",
+    image: "/team_2.jpg",
+  },
+];
 
 export default function Team() {
   return (
@@ -75,9 +126,7 @@ export default function Team() {
         className="flex flex-wrap justify-center gap-3 mb-12"
         data-aos="fade-up"
         data-aos-delay="300"
-      >
-
-      </div>
+      ></div>
 
       {/* Team Grid */}
       <div

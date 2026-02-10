@@ -15,7 +15,7 @@ import Gallery from "./sections/Gallery";
 import Team from "./sections/Team";
 import FAQ from "./sections/FAQ";
 import Footer from "./sections/Footer";
-import Page from "./sections/Hero_Container";
+import Hero from "./sections/Hero";
 
 function App() {
   useEffect(() => {
@@ -45,7 +45,7 @@ function App() {
 
     {/* Main Content */}
     <main className="relative z-10 bg-black">
-      <Page />
+      <Hero />
       <Tickets />
       <About />
       <Speakers />
