@@ -44,16 +44,6 @@ const teamMembers = [
   },
 ];
 
-const departments = [
-  "All",
-  "Leadership",
-  "Curation",
-  "Design",
-  "Marketing",
-  "Logistics",
-  "Finance",
-  "Tech",
-];
 
 export default function Team() {
   return (
@@ -63,15 +53,12 @@ export default function Team() {
     >
       {/* Section Header */}
       <div className="text-center mb-16">
-        <span className="micro-label mb-4 block" data-aos="fade-up">
-          THE TEAM
-        </span>
         <h2
           className="headline-lg text-tedx-white mb-4"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          THE <span className="text-tedx-red">VISIONARIES</span>
+          THE <span className="text-tedx-red">TEAM</span>
         </h2>
         <p
           className="body-text max-w-xl mx-auto"
@@ -89,18 +76,7 @@ export default function Team() {
         data-aos="fade-up"
         data-aos-delay="300"
       >
-        {departments.map((dept, idx) => (
-          <button
-            key={dept}
-            className={`px-4 py-2 rounded-full font-mono text-xs uppercase tracking-wider transition-all duration-300 ${
-              idx === 0
-                ? "bg-tedx-red text-white"
-                : "bg-tedx-white/10 text-tedx-gray hover:bg-tedx-white/20 hover:text-tedx-white"
-            }`}
-          >
-            {dept}
-          </button>
-        ))}
+
       </div>
 
       {/* Team Grid */}
@@ -130,7 +106,6 @@ export default function Team() {
             <p className="font-mono text-xs text-tedx-red uppercase tracking-wider">
               {member.role}
             </p>
-            <p className="text-xs text-tedx-gray mt-1">{member.dept}</p>
           </div>
         ))}
       </div>

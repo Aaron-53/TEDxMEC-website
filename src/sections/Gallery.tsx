@@ -49,13 +49,7 @@ export default function Gallery() {
     >
       {/* Section Header */}
       <div className="mb-12">
-        <span
-          className="font-mono text-xs uppercase tracking-[0.14em] text-gray-500 mb-4 block"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          GALLERY
-        </span>
+
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
           <h2
             className="font-sora font-bold uppercase text-[clamp(34px,3.6vw,56px)] leading-[1.05] tracking-[-0.02em] text-gray-900"
@@ -75,15 +69,6 @@ export default function Gallery() {
             the ideas.
           </p>
         </div>
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 mt-6 text-tedx-red font-mono text-sm uppercase tracking-wider hover:underline"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
-          Submit your photos
-          <ArrowRight className="w-4 h-4" />
-        </a>
       </div>
 
       {/* Masonry Grid */}

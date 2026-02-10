@@ -36,7 +36,6 @@ function App() {
   <div className="relative bg-tedx-charcoal">
 
     {/* Plasma background layer */}
-    <Page />
 
     {/* Noise Overlay */}
     <div className="noise-overlay" />
@@ -46,6 +45,7 @@ function App() {
 
     {/* Main Content */}
     <main className="relative z-10 bg-black">
+      <Page />
       <Tickets />
       <About />
       <Speakers />

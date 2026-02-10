@@ -1,18 +1,13 @@
-import {
-  Instagram,
-  Linkedin,
-  Youtube,
-  Twitter,
-  Mail,
-  MapPin,
-  Send,
-} from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
+import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: FaInstagram, href: "#", label: "Instagram" },
+  { icon: FaLinkedin, href: "#", label: "LinkedIn" },
+  { icon: FaYoutube, href: "#", label: "YouTube" },
+  { icon: FaXTwitter, href: "#", label: "Twitter" },
 ];
 
 export default function Footer() {
@@ -24,8 +19,6 @@ export default function Footer() {
           {/* Left Column - Contact Info */}
           <div
             className="footer-left"
-            data-aos="fade-right"
-            data-aos-delay="100"
           >
             <span className="font-mono text-xs uppercase tracking-[0.14em] text-gray-500 mb-4 block">
               CONTACT
@@ -73,8 +66,6 @@ export default function Footer() {
           {/* Right Column - Contact Form */}
           <div
             className="footer-right"
-            data-aos="fade-left"
-            data-aos-delay="200"
           >
             <form className="space-y-6">
               <div>
@@ -125,31 +116,16 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div
         className="footer-bottom border-t border-gray-200 py-8 px-[6vw]"
-        data-aos="fade-up"
-        data-aos-delay="300"
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           {/* TEDx Disclaimer */}
           <p className="text-xs text-gray-500 text-center md:text-left max-w-md">
-            TEDxMEC is independently organized under license from TED. This
-            independent TEDx event is operated under license from TED.
+            TEDxMEC is independently organized under license from TED.
           </p>
 
           {/* Links */}
           <div className="flex items-center gap-6">
-            <a
-              href="#"
-              className="text-xs text-gray-500 hover:text-tedx-red transition-colors"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-xs text-gray-500 hover:text-tedx-red transition-colors"
-            >
-              Code of Conduct
-            </a>
-            <span className="text-xs text-gray-400">© 2025 TEDxMEC</span>
+            <span className="text-xs text-gray-400">© 2026 TEDxMEC</span>
           </div>
         </div>
       </div>

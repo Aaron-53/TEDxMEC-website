@@ -1,3 +1,5 @@
+import PlasmaHero from "@/components/plasma";
+
 export default function Hero() {
   return (
     <section
@@ -5,6 +7,7 @@ export default function Hero() {
       id="hero"
     >
       {/* hero content here */}
+      <PlasmaHero />
     </section>
   );
 }
