@@ -1,5 +1,4 @@
 import PlasmaHero from "@/components/plasma";
-import { useState } from "react";
 export default function Hero() {
 const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
