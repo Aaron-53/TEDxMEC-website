@@ -27,9 +27,11 @@ export default function Performances() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col lg:flex-row items-center lg:items-start px-[6vw] gap-12 lg:gap-0">
+      <div className="relative z-10 h-full flex flex-col lg:flex-row items-center lg:items-center px-[6vw] gap-8 lg:gap-20 xl:gap-80">
         {/* Left Text */}
-        <div className="w-full lg:max-w-[44vw] text-center lg:text-left">
+        <div className="w-full lg:flex-1 lg:max-w-[45%] text-center lg:text-left">
+          
+
           <h2
             className="headline-lg text-tedx-white mb-4 lg:mb-6"
             data-aos="fade-right"
@@ -52,7 +54,7 @@ export default function Performances() {
 
         {/* Right Performance Card */}
         <div
-          className="w-full lg:w-[32vw] lg:absolute lg:right-[6vw] lg:top-1/2 lg:-translate-y-1/2"
+          className=" w-full sm:w-1/2 lg:flex-1 lg:max-w-[35%] lg:ml-auto"
           data-aos="fade-left"
           data-aos-delay="500"
         >
