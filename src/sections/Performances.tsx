@@ -1,11 +1,5 @@
 import { useState } from "react";
-import { X, Music, Drama, Theater } from "lucide-react";
-
-const performances = [
-  { icon: Music, label: "Music" },
-  { icon: Drama, label: "Dance" },
-  { icon: Theater, label: "Theatre" },
-];
+import { X } from "lucide-react";
 
 const previousPerformers = [
   {
