@@ -1,19 +1,72 @@
-import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { X } from "lucide-react";
 
-const speakers = [
-  { name: "Aarav Menon", topic: "The Future of AI" },
-  { name: "Diya Krishnan", topic: "Sustainable Design" },
-  { name: "Rishi Varma", topic: "Building Communities" },
-  { name: "Sara Thomas", topic: "Digital Wellness" },
-  { name: "Kunal Pai", topic: "Space Exploration" },
-  { name: "Meera Raj", topic: "Social Innovation" },
-  { name: "Arjun Nair", topic: "Creative Leadership" },
-  { name: "Priya Das", topic: "Mental Health" },
+// Current speakers for 2025
+const currentSpeakers = [
+  {
+    name: "Dr. Arjun Nair",
+    topic: "The Future of Digital Healthcare",
+    bio: "Revolutionary surgeon and AI researcher transforming medical practices through innovative technology integration and patient-centered care solutions.",
+    image: "/speakers/placeholder.jpg",
+    category: "Healthcare Innovation",
+  },
+  {
+    name: "Coming Soon",
+    topic: "Speaker Announcement",
+    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
+    image: "/speakers/placeholder.jpg",
+    category: "Technology Innovation",
+  },
+  {
+    name: "Coming Soon",
+    topic: "Speaker Announcement",
+    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
+    image: "/speakers/placeholder.jpg",
+    category: "Social Impact",
+  },
+  {
+    name: "Coming Soon",
+    topic: "Speaker Announcement",
+    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
+    image: "/speakers/placeholder.jpg",
+    category: "Creative Arts",
+  },
+  {
+    name: "Coming Soon",
+    topic: "Speaker Announcement",
+    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
+    image: "/speakers/placeholder.jpg",
+    category: "Entrepreneurship",
+  },
+  {
+    name: "Coming Soon",
+    topic: "Speaker Announcement",
+    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
+    image: "/speakers/placeholder.jpg",
+    category: "Science & Research",
+  },
 ];
 
 export default function Speakers() {
+  const [selectedSpeaker, setSelectedSpeaker] = useState<
+    (typeof currentSpeakers)[0] | null
+  >(null);
+
+  const openModal = (speaker: (typeof currentSpeakers)[0]) => {
+    if (speaker.name !== "Coming Soon") {
+      setSelectedSpeaker(speaker);
+    }
+  };
+
+  const closeModal = () => {
+    setSelectedSpeaker(null);
+  };
+
   return (
-    <section className="min-h-screen relative z-30 py-24 lg:py-0" id="speakers">
+    <section
+      className="relative z-[70] w-screen py-10 flex flex-col justify-center px-[6vw]"
+      id="speakers"
+    >
       {/* Background Image */}
       <div
         className="absolute inset-0 w-full h-full"
@@ -29,71 +82,142 @@ export default function Speakers() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col lg:flex-row items-center lg:items-start px-[6vw] gap-12 lg:gap-0">
-        {/* Left Text */}
-        <div className="w-full lg:max-w-[40vw] text-center lg:text-left">
+      <div className="relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-8">
           <h2
-            className="headline-lg text-tedx-white mb-4 lg:mb-6"
-            data-aos="fade-right"
+            className="headline-lg text-tedx-white mb-4"
+            data-aos="fade-up"
             data-aos-delay="300"
           >
-            THE
-            <br />
-            <span className="text-tedx-red">LINEUP</span>
+            THE <span className="text-tedx-red">LINEUP</span>
           </h2>
-
           <p
-            className="body-text text-base lg:text-lg"
-            data-aos="fade-right"
+            className="body-text max-w-xl mx-auto text-tedx-white/80"
+            data-aos="fade-up"
             data-aos-delay="400"
           >
-            Founders, researchers, artists, and builders—sharing ideas that
-            stick. Get ready to be inspired by voices that matter.
+            Visionaries, innovators, and changemakers ready to share ideas that
+            transform.
+            <span className="text-tedx-red font-semibold">
+              {" "}
+              Stay tuned as we reveal each extraordinary voice.
+            </span>
           </p>
         </div>
-
-        {/* Right Speaker Card */}
+        {/* Speakers Grid */}
         <div
-          className="w-full lg:w-[34vw] lg:min-h-[34vh] lg:absolute lg:right-[6vw] lg:top-1/2 lg:-translate-y-1/2"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto"
           data-aos="fade-left"
           data-aos-delay="500"
         >
-          <div className="bg-tedx-charcoal/95 border border-tedx-white/20 rounded-lg p-6 lg:p-8 shadow-2xl">
-            <span className="card-title font-mono text-xs uppercase tracking-[0.14em] text-tedx-gray mb-4 lg:mb-6 block">
-              2025 SPEAKERS
-            </span>
-
-            <div className="speaker-list grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-3 lg:gap-y-4">
-              {speakers.map((speaker, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-3"
-                  data-aos="fade-up"
-                  data-aos-delay={600 + idx * 50}
-                >
-                  <span className="w-2 h-2 bg-tedx-red rounded-full flex-shrink-0" />
-                  <div>
-                    <p className="text-tedx-white font-medium text-sm">
-                      {speaker.name}
-                    </p>
-                    <p className="text-tedx-gray text-xs">{speaker.topic}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 mt-6 lg:mt-8 text-tedx-red font-mono text-sm uppercase tracking-wider hover:underline"
-              data-aos="fade-up"
-              data-aos-delay="1000"
+          {currentSpeakers.map((speaker, idx) => (
+            <div
+              key={idx}
+              className={`speaker-card group ${
+                speaker.name !== "Coming Soon"
+                  ? "cursor-pointer"
+                  : "cursor-default"
+              }`}
+              onClick={() => openModal(speaker)}
+              data-aos="zoom-in"
+              data-aos-delay={600 + idx * 100}
             >
-              View full profiles
-              <ArrowRight className="w-4 h-4" />
-            </a>
+              <div className="relative overflow-hidden rounded-lg mb-4 aspect-square bg-gray-900">
+                {speaker.name === "Coming Soon" ? (
+                  <div className="w-full h-full flex items-center justify-center bg-tedx-black/50 border border-tedx-white/20">
+                    <div className="text-center">
+                      <span className="text-tedx-white/30 text-4xl mb-2 block">
+                        ?
+                      </span>
+                      <div className="flex justify-center gap-1">
+                        <span className="w-2 h-2 bg-tedx-red rounded-full animate-pulse"></span>
+                        <span
+                          className="w-2 h-2 bg-tedx-red/60 rounded-full animate-pulse"
+                          style={{ animationDelay: "0.2s" }}
+                        ></span>
+                        <span
+                          className="w-2 h-2 bg-tedx-red/40 rounded-full animate-pulse"
+                          style={{ animationDelay: "0.4s" }}
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <img
+                      src={speaker.image}
+                      alt={speaker.name}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-tedx-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-tedx-red text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Click to Read More
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+              <div className="text-center">
+                <h3 className="font-sora font-semibold text-tedx-white mb-2">
+                  {speaker.name}
+                </h3>
+                <p className="text-tedx-red text-sm font-medium mb-1">
+                  {speaker.topic}
+                </p>
+                <p className="text-tedx-gray text-xs">{speaker.category}</p>
+              </div>
+            </div>
+          ))}
+        </div>{" "}
+      </div>
+      {/* Modal */}
+      {selectedSpeaker && (
+        <div
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black bg-opacity-50 p-4"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-tedx-charcoal border border-tedx-white/20 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-6">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="font-sora font-bold text-2xl text-tedx-white mb-1">
+                    {selectedSpeaker.name}
+                  </h3>
+                  <p className="text-tedx-red font-medium">
+                    {selectedSpeaker.topic}
+                  </p>
+                </div>
+                <button
+                  onClick={closeModal}
+                  className="p-2 hover:bg-tedx-white/10 rounded-full transition-colors"
+                >
+                  <X className="w-5 h-5 text-tedx-white" />
+                </button>
+              </div>
+              <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden bg-gray-900">
+                <img
+                  src={selectedSpeaker.image}
+                  alt={selectedSpeaker.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-tedx-gray leading-relaxed">
+                {selectedSpeaker.bio}
+              </p>
+              <div className="mt-4 text-center">
+                <span className="inline-block px-3 py-1 bg-tedx-red/20 text-tedx-red text-xs font-medium rounded-full">
+                  {selectedSpeaker.category}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }

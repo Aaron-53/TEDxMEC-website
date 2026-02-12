@@ -2,12 +2,23 @@ import { Mail, MapPin, Send } from "lucide-react";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-
 const socialLinks = [
-  { icon: FaInstagram, href: "#", label: "Instagram" },
-  { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-  { icon: FaYoutube, href: "#", label: "YouTube" },
-  { icon: FaXTwitter, href: "#", label: "Twitter" },
+  {
+    icon: FaInstagram,
+    href: "https://www.instagram.com/tedxmec?igsh=MTR0emdyb3V1d2Zu",
+    label: "Instagram",
+  },
+  {
+    icon: FaLinkedin,
+    href: "https://www.linkedin.com/company/tedxmec/",
+    label: "LinkedIn",
+  },
+  {
+    icon: FaYoutube,
+    href: "https://youtube.com/playlist?list=PLZmEteRpgiz03EX-4bhwtt6g-tV-2piUn&si=dQivi9Gxse-4wbKz",
+    label: "YouTube",
+  },
+  { icon: FaXTwitter, href: "https://x.com/TEDxMEC", label: "Twitter" },
 ];
 
 export default function Footer() {
@@ -17,9 +28,7 @@ export default function Footer() {
       <div className="py-24 px-[6vw]">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Left Column - Contact Info */}
-          <div
-            className="footer-left"
-          >
+          <div className="footer-left">
             <span className="font-mono text-xs uppercase tracking-[0.14em] text-gray-500 mb-4 block">
               CONTACT
             </span>
@@ -64,9 +73,7 @@ export default function Footer() {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div
-            className="footer-right"
-          >
+          <div className="footer-right">
             <form className="space-y-6">
               <div>
                 <label className="block font-mono text-xs uppercase tracking-wider text-gray-500 mb-2">
@@ -114,9 +121,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div
-        className="footer-bottom border-t border-gray-200 py-8 px-[6vw]"
-      >
+      <div className="footer-bottom border-t border-gray-200 py-8 px-[6vw]">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           {/* TEDx Disclaimer */}
           <p className="text-xs text-gray-500 text-center md:text-left max-w-md">

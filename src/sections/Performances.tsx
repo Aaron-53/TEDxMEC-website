@@ -1,4 +1,5 @@
-import { Music, Drama, Theater } from "lucide-react";
+import { useState } from "react";
+import { X, Music, Drama, Theater } from "lucide-react";
 
 const performances = [
   { icon: Music, label: "Music" },
@@ -6,10 +7,56 @@ const performances = [
   { icon: Theater, label: "Theatre" },
 ];
 
+const previousPerformers = [
+  {
+    name: "Ashbel Peter",
+    type: "Independent Musician",
+    description:
+      "Ashbel Peter, a crowd favourite and widely acclaimed independent musician, known for his harmonium expertise.",
+    image: "/performers/placeholder.jpg",
+    specialty: "Harmonium",
+  },
+  {
+    name: "George Austin",
+    type: "Rock Guitarist",
+    description: "George Austin, the lead guitarist of Rock Paper Scissors",
+    image: "/performers/placeholder.jpg",
+    specialty: "Lead Guitar",
+  },
+  {
+    name: "Sidharth Jedhu",
+    type: "Classical Percussionist",
+    description:
+      "Sidharth Jedhu, popular tabla scholar from RLV College of Music and Fine Arts",
+    image: "/performers/placeholder.jpg",
+    specialty: "Tabla",
+  },
+  {
+    name: "We Are The Boom (WAT.B)",
+    type: "Artist Collective",
+    description:
+      "We Are The Boom (WAT.B) the dynamic artist collective from Kochi, featuring the talents of Rehna Shaz, Abhiraman, TJUS, Iappan, and Gauthaman, is renowned for their electrifying live performances that seamlessly blend diverse musical genres",
+    image: "/performers/placeholder.jpg",
+    specialty: "Multi-Genre Collective",
+  },
+];
+
 export default function Performances() {
+  const [selectedPerformer, setSelectedPerformer] = useState<
+    (typeof previousPerformers)[0] | null
+  >(null);
+
+  const openModal = (performer: (typeof previousPerformers)[0]) => {
+    setSelectedPerformer(performer);
+  };
+
+  const closeModal = () => {
+    setSelectedPerformer(null);
+  };
+
   return (
     <section
-      className="min-h-screen relative z-[60] flex items-center py-24 lg:py-0"
+      className="relative z-[60] w-screen h-screen flex flex-col justify-center px-[6vw]"
       id="performances"
     >
       {/* Background Image */}
@@ -27,62 +74,127 @@ export default function Performances() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col lg:flex-row items-center lg:items-center px-[6vw] gap-8 lg:gap-20 xl:gap-80">
-        {/* Left Text */}
-        <div className="w-full lg:flex-1 lg:max-w-[45%] text-center lg:text-left">
-          
-
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12">
           <h2
-            className="headline-lg text-tedx-white mb-4 lg:mb-6"
-            data-aos="fade-right"
+            className="headline-lg text-tedx-white mb-6"
+            data-aos="fade-up"
             data-aos-delay="300"
           >
-            MORE THAN
-            <br />
-            <span className="text-tedx-red">TALKS</span>
+            LIVE <span className="text-tedx-red">PERFORMANCES</span>
           </h2>
-
           <p
-            className="body-text text-base lg:text-lg"
-            data-aos="fade-right"
+            className="body-text max-w-2xl mx-auto text-tedx-white/80 text-lg"
+            data-aos="fade-up"
             data-aos-delay="400"
           >
-            Music, movement, and storytelling—live on stage. Experience the full
-            spectrum of creative expression.
+            Experience the artistry and talent of performers who have graced our
+            stage with unforgettable live performances.
           </p>
         </div>
 
-        {/* Right Performance Card */}
+        {/* Performers Showcase */}
         <div
-          className=" w-full sm:w-1/2 lg:flex-1 lg:max-w-[35%] lg:ml-auto"
-          data-aos="fade-left"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"
+          data-aos="fade-up"
           data-aos-delay="500"
         >
-          <div className="bg-tedx-charcoal/95 border border-tedx-white/20 rounded-lg p-6 lg:p-8 shadow-2xl">
-            <span className="font-mono text-xs uppercase tracking-[0.14em] text-tedx-gray mb-4 lg:mb-6 block">
-              LIVE SETS
-            </span>
+          {previousPerformers.map((performer, idx) => (
+            <div
+              key={idx}
+              className="performer-spotlight group cursor-pointer"
+              onClick={() => openModal(performer)}
+              data-aos="flip-left"
+              data-aos-delay={600 + idx * 150}
+            >
+              {/* Performer Card */}
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-tedx-black/90 via-tedx-charcoal/80 to-tedx-black/90 border border-tedx-white/20 hover:border-tedx-red/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl">
+                {/* Image Section */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={performer.image}
+                    alt={performer.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
-            <div className="space-y-3 lg:space-y-4">
-              {performances.map((perf, idx) => (
-                <div
-                  key={idx}
-                  className="perf-item flex items-center gap-3 lg:gap-4 p-3 lg:p-4 bg-tedx-black/80 border border-tedx-white/10 rounded-lg hover:bg-tedx-red/10 hover:border-tedx-red/30 transition-all duration-300"
-                  data-aos="fade-up"
-                  data-aos-delay={600 + idx * 100}
-                >
-                  <div className="w-8 h-8 lg:w-10 lg:h-10 bg-tedx-red rounded-lg flex items-center justify-center shadow-lg">
-                    <perf.icon className="w-4 h-4 lg:w-5 lg:h-5 text-white" />
+                  {/* Floating Specialty Badge */}
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-tedx-red text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                      {performer.specialty}
+                    </span>
                   </div>
-                  <span className="text-tedx-white font-medium text-sm lg:text-base">
-                    {perf.label}
-                  </span>
+
+                  {/* Hover Effect */}
+                  <div className="absolute inset-0 bg-tedx-red/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="text-white text-center transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                      <p className="font-bold">Click to Read More</p>
+                    </div>
+                  </div>
                 </div>
-              ))}
+
+                {/* Content Section */}
+                <div className="p-5">
+                  <h3 className="font-bold text-tedx-white text-lg mb-2 group-hover:text-tedx-red transition-colors">
+                    {performer.name}
+                  </h3>
+                  <p className="text-tedx-white/70 text-sm font-medium">
+                    {performer.type}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Modal */}
+      {selectedPerformer && (
+        <div
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black bg-opacity-50 p-4"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-tedx-charcoal border border-tedx-white/20 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-6">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="font-sora font-bold text-2xl text-tedx-white mb-1">
+                    {selectedPerformer.name}
+                  </h3>
+                  <p className="text-tedx-red font-medium">
+                    {selectedPerformer.type}
+                  </p>
+                </div>
+                <button
+                  onClick={closeModal}
+                  className="p-2 hover:bg-tedx-white/10 rounded-full transition-colors"
+                >
+                  <X className="w-5 h-5 text-tedx-white" />
+                </button>
+              </div>
+              <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden bg-gray-900">
+                <img
+                  src={selectedPerformer.image}
+                  alt={selectedPerformer.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-tedx-white/90 leading-relaxed">
+                {selectedPerformer.description}
+              </p>
+              <div className="mt-4 text-center">
+                <span className="inline-block px-3 py-1 bg-tedx-red/20 text-tedx-red text-xs font-medium rounded-full">
+                  {selectedPerformer.specialty}
+                </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }

@@ -15,7 +15,7 @@ const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) =>
     >
       {/* hero content here */}
 <div className="text absolute  w-screen h-screen z-10 flex flex-col justify-center items-center">
-<span className="text-6xl font-light"><span className="font-bold text-red-600">TED<sup className="text-3xl">X</sup></span>MEC</span>
+<span className="text-6xl font-light drop-shadow-[2px_2px_4px_rgba(0,0,0,1)]"><span className="font-bold text-red-600">TED<sup className="text-3xl">X</sup></span>MEC</span>
 <span className="font-bold">Ideas <span className="font-light">Worth</span> Spreading.</span>
 <div className="hidden lg:flex items-center gap-8 mt-10">
             <a

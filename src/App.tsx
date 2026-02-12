@@ -7,7 +7,6 @@ import Navigation from "./components/Navigation";
 import Tickets from "./sections/Tickets";
 import About from "./sections/About";
 import Speakers from "./sections/Speakers";
-import Experience from "./sections/Experience";
 import Community from "./sections/Community";
 import Performances from "./sections/Performances";
 import Partners from "./sections/Partners";
@@ -16,6 +15,7 @@ import Team from "./sections/Team";
 import FAQ from "./sections/FAQ";
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
+import PreviousSpeakers from "./sections/PreviousSpeakers";
 
 function App() {
   useEffect(() => {
@@ -47,10 +47,10 @@ function App() {
       {/* Main Content */}
       <main className="relative z-10 w-full bg-black">
         <Hero />
-        <Tickets />
         <About />
         <Speakers />
-        <Experience />
+        <Tickets />
+        <PreviousSpeakers />
         <Community />
         <Performances />
         <Partners />
