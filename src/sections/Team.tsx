@@ -51,7 +51,7 @@ const teamMembers = [
     name: "Jahfer",
     role: "Program Director",
     dept: "Programs",
-    image: "/team/placeholder.jpg",
+    image: "/team/jeppu.jpeg",
   },
   {
     name: "Joanna",
@@ -99,7 +99,7 @@ const teamMembers = [
     name: "Aadil",
     role: "Speaker Head",
     dept: "Speakers",
-    image: "/team/placeholder.jpg",
+    image: "/team/aadil.jpeg",
   },
   {
     name: "Anjali",

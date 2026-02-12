@@ -112,35 +112,35 @@ const previousSpeakers = [
   {
     name: "MUFEED V H",
     designation: "AI Engineer & Cybersecurity Specialist",
-    image: "/speakers/placeholder.jpg",
+    image: "/PrevSpeakers/mufeed_vh.jpg.jpeg",
     description:
       "Mufeed V H is the creator of Devika, an open-source alternative to Devin, and the CEO and Co-founder of Winfunc (YC S24), where he works on applying advanced AI reasoning capabilities to security audits. A cybersecurity specialist from Thrissur, Kerala, he has represented India at the WorldSkills Olympiad, earned a Bronze Medal at the BRICS Skills Olympiad, and won Gold at the IndiaSkills Nationals. He has reviewed and patched over 300 CVEs in open-source software and has contributed to securing major global organizations through responsible disclosure and bug bounty programs.",
   },
   {
     name: "DR. V PILLAY",
     designation: "Medical Toxicologist & Forensic Medicine Specialist",
-    image: "/speakers/placeholder.jpg",
+    image: "/PrevSpeakers/v_v_pillay.jpg.jpeg",
     description:
       "Dr. V. V. Pillay is a senior medical toxicologist and forensic medicine specialist recognized for his contributions to the study and investigation of poisoning. He is the author of Modern Medical Toxicology and has been involved in several prominent forensic cases, including those featured in Curry and Cyanide. A recipient of the Lifetime Achievement Award and President of the Indian Society of Toxicology, he has published extensively and delivered lectures across India and internationally.",
   },
   {
     name: "NAYANA SHYAM",
     designation: "Director, Actor & Writer",
-    image: "/speakers/placeholder.jpg",
+    image: "/PrevSpeakers/nayana_shyam.jpg.jpeg",
     description:
       "Nayana Shyam is a director, actor, and writer known for her work in digital storytelling and web series. She directed the widely viewed Mother's Day special, Fashion Conversations With Mom, which garnered over forty million views on FilterCopy's YouTube channel. Hailing from Vennala, Kochi, her portfolio includes projects such as Firsts, and the second seasons of Adulting and Please Find Attached. She served as a creative editor at Netflix from 2020 to 2022, and later created the web series Sisterhood with TVF.",
   },
   {
     name: "GOKUL GOPALAKRISHNAN",
     designation: "Comic Artist & Motor Vehicles Inspector",
-    image: "/speakers/placeholder.jpg",
+    image: "/PrevSpeakers/gokul_gopalakrishnan.png",
     description:
       "Gokul Gopalakrishnan is a motor vehicles inspector and comic artist from Thrissur. A graduate in Sociology with a Master's degree in English Literature, he is best known for his long-running comic strip Small Talk, published in The New Indian Express since 2009. His work has appeared in publications including Mint, Asian Age, Deccan Chronicle, DNA, Fountain Ink, and various comics anthologies. He is associated with Comix India, an alternative comics movement, and has written extensively on comic art for both academic and popular audiences.",
   },
   {
     name: "ANAND MADHUSOODANAN",
     designation: "Musician & Film Composer",
-    image: "/speakers/placeholder.jpg",
+    image: "/PrevSpeakers/anand_madhu.jpg.jpeg",
     description:
       "Anand Madhusoodanan is a musician and composer primarily known for his work in Malayalam cinema. Since his debut with Molly Aunty Rocks (2012), he has composed music for over a dozen films. He is widely recognized for his collaborations with writer-director Ranjith Sankar, contributing to films such as Pretham (2016), Punyalan Private Ltd. (2017), and Njan Marykutty (2018), all featuring Jayasurya in lead roles.",
   },

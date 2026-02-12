@@ -12,7 +12,7 @@ const previousPerformers = [
   },
   {
     name: "George Austin",
-    type: "Rock Guitarist",
+    type: "Guitarist",
     description: "George Austin, the lead guitarist of Rock Paper Scissors",
     image: "/performers/placeholder.jpg",
     specialty: "Lead Guitar",
