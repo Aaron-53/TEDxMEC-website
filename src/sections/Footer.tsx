@@ -1,4 +1,4 @@
-import { Mail, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send, Phone } from "lucide-react";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -47,6 +47,26 @@ export default function Footer() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <span className="font-medium">reachtedxmec@gmail.com</span>
+              </a>
+
+              <a
+                href="tel:+918078472275"
+                className="flex items-center gap-4 text-gray-700 hover:text-tedx-red transition-colors"
+              >
+                <div className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <span className="font-medium">+91 8078 472 275</span>
+              </a>
+
+              <a
+                href="tel:+918138077600"
+                className="flex items-center gap-4 text-gray-700 hover:text-tedx-red transition-colors"
+              >
+                <div className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <span className="font-medium">+91 81380 77600</span>
               </a>
 
               <div className="flex items-center gap-4 text-gray-700">
