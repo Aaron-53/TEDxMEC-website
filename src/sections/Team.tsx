@@ -136,7 +136,7 @@ export default function Team() {
           data-aos-delay="200"
         >
           Organized by students. Supported by the community. Meet the minds
-          behind TEDxMEC 2025.
+          behind TEDxMEC 2026.
         </p>
       </div>
 

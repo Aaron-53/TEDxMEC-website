@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "Where is the venue?",
     answer:
-      "TEDxMEC 2025 will be held at the Main Auditorium, Model Engineering College, Kochi. The venue is easily accessible by public transport and has ample parking space.",
+      "TEDxMEC 2026 will be held at the Main Auditorium, Model Engineering College, Kochi. The venue is easily accessible by public transport and has ample parking space.",
     icon: MapPin,
   },
   {
@@ -64,7 +64,7 @@ export default function FAQ() {
             GOT <span className="text-tedx-red">QUESTIONS?</span>
           </h2>
           <p className="body-text" data-aos="fade-up" data-aos-delay="300">
-            Find answers to commonly asked questions about TEDxMEC 2025.
+            Find answers to commonly asked questions about TEDxMEC 2026.
           </p>
         </div>
 
