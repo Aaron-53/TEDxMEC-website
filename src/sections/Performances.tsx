@@ -30,7 +30,7 @@ const previousPerformers = [
     type: "Artist Collective",
     description:
       "We Are The Boom (WAT.B) the dynamic artist collective from Kochi, featuring the talents of Rehna Shaz, Abhiraman, TJUS, Iappan, and Gauthaman, is renowned for their electrifying live performances that seamlessly blend diverse musical genres",
-    image: "/performers/placeholder.jpg",
+    image: "/performers/watb.png",
     specialty: "Multi-Genre Collective",
   },
 ];
@@ -50,7 +50,7 @@ export default function Performances() {
 
   return (
     <section
-      className="relative z-[60] w-screen h-screen flex flex-col justify-center px-[6vw]"
+      className="relative z-[60] w-full min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-[6vw] py-12 lg:py-0"
       id="performances"
     >
       {/* Background Image */}
@@ -90,7 +90,7 @@ export default function Performances() {
 
         {/* Performers Showcase */}
         <div
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto"
           data-aos="fade-up"
           data-aos-delay="500"
         >
@@ -112,13 +112,6 @@ export default function Performances() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-
-                  {/* Floating Specialty Badge */}
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-tedx-red text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                      {performer.specialty}
-                    </span>
-                  </div>
 
                   {/* Hover Effect */}
                   <div className="absolute inset-0 bg-tedx-red/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -146,20 +139,20 @@ export default function Performances() {
       {/* Modal */}
       {selectedPerformer && (
         <div
-          className="fixed inset-0 z-[200] flex items-center justify-center bg-black bg-opacity-50 p-4"
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black bg-opacity-50 p-4 overflow-y-auto"
           onClick={closeModal}
         >
           <div
-            className="bg-tedx-charcoal border border-tedx-white/20 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+            className="bg-tedx-charcoal border border-tedx-white/20 rounded-lg max-w-xl w-full max-h-[90vh] my-auto mx-4 overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-6">
+            <div className="p-4 sm:p-6 overflow-y-auto max-h-[85vh]">
               <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="font-sora font-bold text-2xl text-tedx-white mb-1">
+                <div className="flex-1 pr-2">
+                  <h3 className="font-sora font-bold text-xl sm:text-2xl text-tedx-white mb-1 leading-tight">
                     {selectedPerformer.name}
                   </h3>
-                  <p className="text-tedx-red font-medium">
+                  <p className="text-tedx-red font-medium text-sm sm:text-base">
                     {selectedPerformer.type}
                   </p>
                 </div>
@@ -170,7 +163,7 @@ export default function Performances() {
                   <X className="w-5 h-5 text-tedx-white" />
                 </button>
               </div>
-              <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden bg-gray-900">
+              <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-4 sm:mb-6 rounded-lg overflow-hidden bg-gray-900">
                 <img
                   src={selectedPerformer.image}
                   alt={selectedPerformer.name}
@@ -180,11 +173,6 @@ export default function Performances() {
               <p className="text-tedx-white/90 leading-relaxed">
                 {selectedPerformer.description}
               </p>
-              <div className="mt-4 text-center">
-                <span className="inline-block px-3 py-1 bg-tedx-red/20 text-tedx-red text-xs font-medium rounded-full">
-                  {selectedPerformer.specialty}
-                </span>
-              </div>
             </div>
           </div>
         </div>

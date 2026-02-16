@@ -63,7 +63,7 @@ const teamMembers = [
     name: "Aaditya",
     role: "Production Head",
     dept: "Production",
-    image: "/team/placeholder.jpg",
+    image: "/team/aadithya.jpeg",
   },
   {
     name: "Ijlal",
@@ -75,7 +75,7 @@ const teamMembers = [
     name: "Aibel",
     role: "Head of Creatives",
     dept: "Creatives",
-    image: "/team/placeholder.jpg",
+    image: "/team/aibel.jpeg",
   },
   {
     name: "Aaron",
@@ -149,7 +149,7 @@ export default function Team() {
 
       {/* Team Grid */}
       <div
-        className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 max-w-7xl mx-auto"
         data-aos="fade-up"
         data-aos-delay="400"
       >
@@ -158,9 +158,9 @@ export default function Team() {
             key={idx}
             className="team-card group"
             data-aos="zoom-in"
-            data-aos-delay={500 + idx * 100}
+            data-aos-delay={500 + idx * 50}
           >
-            <div className="relative overflow-hidden rounded-lg mb-4 aspect-square">
+            <div className="relative overflow-hidden rounded-lg mb-3 aspect-square">
               <img
                 src={member.image}
                 alt={member.name}
@@ -168,10 +168,10 @@ export default function Team() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-tedx-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <h3 className="font-sora font-semibold text-tedx-white mb-1">
+            <h3 className="font-sora font-semibold text-tedx-white mb-1 text-sm sm:text-base">
               {member.name}
             </h3>
-            <p className="font-mono text-xs text-tedx-red uppercase tracking-wider">
+            <p className="font-mono text-xs text-tedx-red uppercase tracking-wider leading-tight">
               {member.role}
             </p>
           </div>

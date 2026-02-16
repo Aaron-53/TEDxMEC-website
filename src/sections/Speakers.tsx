@@ -4,46 +4,46 @@ import { X } from "lucide-react";
 // Current speakers for 2025
 const currentSpeakers = [
   {
-    name: "Dr. Arjun Nair",
-    topic: "The Future of Digital Healthcare",
-    bio: "Revolutionary surgeon and AI researcher transforming medical practices through innovative technology integration and patient-centered care solutions.",
+    name: "Coming Soon",
+    topic: "Speaker Announcement",
+    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
     image: "/speakers/placeholder.jpg",
-    category: "Healthcare Innovation",
   },
   {
     name: "Coming Soon",
     topic: "Speaker Announcement",
     bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
     image: "/speakers/placeholder.jpg",
-    category: "Technology Innovation",
   },
   {
     name: "Coming Soon",
     topic: "Speaker Announcement",
     bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
     image: "/speakers/placeholder.jpg",
-    category: "Social Impact",
   },
   {
     name: "Coming Soon",
     topic: "Speaker Announcement",
     bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
     image: "/speakers/placeholder.jpg",
-    category: "Creative Arts",
   },
   {
     name: "Coming Soon",
     topic: "Speaker Announcement",
     bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
     image: "/speakers/placeholder.jpg",
-    category: "Entrepreneurship",
   },
   {
     name: "Coming Soon",
     topic: "Speaker Announcement",
     bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
     image: "/speakers/placeholder.jpg",
-    category: "Science & Research",
+  },
+  {
+    name: "Coming Soon",
+    topic: "Speaker Announcement",
+    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
+    image: "/speakers/placeholder.jpg",
   },
 ];
 
@@ -166,7 +166,6 @@ export default function Speakers() {
                 <p className="text-tedx-red text-sm font-medium mb-1">
                   {speaker.topic}
                 </p>
-                <p className="text-tedx-gray text-xs">{speaker.category}</p>
               </div>
             </div>
           ))}
@@ -209,11 +208,6 @@ export default function Speakers() {
               <p className="text-tedx-gray leading-relaxed">
                 {selectedSpeaker.bio}
               </p>
-              <div className="mt-4 text-center">
-                <span className="inline-block px-3 py-1 bg-tedx-red/20 text-tedx-red text-xs font-medium rounded-full">
-                  {selectedSpeaker.category}
-                </span>
-              </div>
             </div>
           </div>
         </div>

@@ -4,15 +4,15 @@ import "aos/dist/aos.css";
 import "./App.css";
 
 import Navigation from "./components/Navigation";
-import Tickets from "./sections/Tickets";
+// import Tickets from "./sections/Tickets";
 import About from "./sections/About";
 import Speakers from "./sections/Speakers";
-import Community from "./sections/Community";
+// import Community from "./sections/Community";
 import Performances from "./sections/Performances";
-import Partners from "./sections/Partners";
+// import Partners from "./sections/Partners";
 import Gallery from "./sections/Gallery";
 import Team from "./sections/Team";
-import FAQ from "./sections/FAQ";
+// import FAQ from "./sections/FAQ";
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import PreviousSpeakers from "./sections/PreviousSpeakers";
@@ -49,14 +49,14 @@ function App() {
         <Hero />
         <About />
         <Speakers />
-        <Tickets />
+        {/* <Tickets /> */}
         <PreviousSpeakers />
-        <Community />
+        {/* <Community /> */}
         <Performances />
-        <Partners />
+        {/* <Partners /> */}
         <Gallery />
         <Team />
-        <FAQ />
+        {/* <FAQ /> */}
         <Footer />
       </main>
     </div>

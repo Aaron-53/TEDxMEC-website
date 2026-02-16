@@ -40,13 +40,13 @@ export default function Footer() {
 
             <div className="space-y-6">
               <a
-                href="mailto:hello@tedxmec.in"
+                href="mailto:reachtedxmec@gmail.com"
                 className="flex items-center gap-4 text-gray-700 hover:text-tedx-red transition-colors"
               >
                 <div className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="font-medium">hello@tedxmec.in</span>
+                <span className="font-medium">reachtedxmec@gmail.com</span>
               </a>
 
               <div className="flex items-center gap-4 text-gray-700">
@@ -74,14 +74,20 @@ export default function Footer() {
 
           {/* Right Column - Contact Form */}
           <div className="footer-right">
-            <form className="space-y-6">
+            <form
+              action="https://formspree.io/f/xgolabyn"
+              method="POST"
+              className="space-y-6"
+            >
               <div>
                 <label className="block font-mono text-xs uppercase tracking-wider text-gray-500 mb-2">
                   Name
                 </label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your name"
+                  required
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-tedx-red transition-colors"
                 />
               </div>
@@ -92,7 +98,9 @@ export default function Footer() {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="your@email.com"
+                  required
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-tedx-red transition-colors"
                 />
               </div>
@@ -103,7 +111,9 @@ export default function Footer() {
                 </label>
                 <textarea
                   rows={4}
+                  name="message"
                   placeholder="Your message..."
+                  required
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-tedx-red transition-colors resize-none"
                 />
               </div>

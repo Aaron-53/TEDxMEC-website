@@ -38,7 +38,7 @@ export default function About() {
           </h2>
 
           <div
-            className="grid md:grid-cols-3 gap-16"
+            className="flex  gap-16"
             data-aos="fade-up"
             data-aos-delay="400"
           >
@@ -66,7 +66,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-tedx-black/30 backdrop-blur-sm rounded-lg p-6 border border-tedx-white/10">
+            {/* <div className="bg-tedx-black/30 backdrop-blur-sm rounded-lg p-6 border border-tedx-white/10">
               <h3 className="text-tedx-red font-semibold mb-3 text-sm uppercase tracking-wider">
                 This Year's Theme: Luminality
               </h3>
@@ -77,7 +77,7 @@ export default function About() {
                 possibilities. Finding light in transition, clarity in
                 uncertainty, and brilliance where innovation thrives.
               </p>
-            </div>
+            </div> */}
           </div>
 
           <div className="text-center mt-8">
