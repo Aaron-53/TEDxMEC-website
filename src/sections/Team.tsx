@@ -158,7 +158,7 @@ export default function Team() {
             key={idx}
             className="team-card group"
             data-aos="zoom-in"
-            data-aos-delay={(idx % 5) * 50}
+            data-aos-delay={(idx % 5) * 100}
           >
             <div className="relative overflow-hidden rounded-lg mb-3 aspect-square">
               <img
