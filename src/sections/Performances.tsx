@@ -13,7 +13,7 @@ const previousPerformers = [
   {
     name: "George Austin",
     type: "Guitarist",
-    description: "George Austin, the lead guitarist of Rock Paper Scissors",
+    description: "George Austin, the lead guitarist of Rock Paper Scissors.",
     image: "/performers/george.png",
     specialty: "Lead Guitar",
   },
@@ -21,7 +21,7 @@ const previousPerformers = [
     name: "Sidharth Jedhu",
     type: "Classical Percussionist",
     description:
-      "Sidharth Jedhu, popular tabla scholar from RLV College of Music and Fine Arts",
+      "Sidharth Jedhu, popular tabla scholar from RLV College of Music and Fine Arts.",
     image: "/performers/sidharth.png",
     specialty: "Tabla",
   },
@@ -29,7 +29,7 @@ const previousPerformers = [
     name: "We Are The Boom (WAT.B)",
     type: "Artist Collective",
     description:
-      "We Are The Boom (WAT.B) the dynamic artist collective from Kochi, featuring the talents of Rehna Shaz, Abhiraman, TJUS, Iappan, and Gauthaman, is renowned for their electrifying live performances that seamlessly blend diverse musical genres",
+      "We Are The Boom (WAT.B) the dynamic artist collective from Kochi, featuring the talents of Rehna Shaz, Abhiraman, TJUS, Iappan, and Gauthaman, is renowned for their electrifying live performances that seamlessly blend diverse musical genres.",
     image: "/performers/watb.png",
     specialty: "Multi-Genre Collective",
   },
