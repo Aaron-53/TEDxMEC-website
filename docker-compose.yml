@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+  tedx-web:
+    image: tedxmec2025/tedxmec-website
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+      - VIRTUALPORT=5173
+      - VIRTUAL_HOST=tedx.mec.ac.in
+networks:
+  default:
+    external:
+      name: mec

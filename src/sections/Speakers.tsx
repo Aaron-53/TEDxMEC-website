@@ -39,12 +39,6 @@ const currentSpeakers = [
     bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
     image: "/speakers/placeholder.jpg",
   },
-  {
-    name: "Coming Soon",
-    topic: "Speaker Announcement",
-    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
-    image: "/speakers/placeholder.jpg",
-  },
 ];
 
 export default function Speakers() {
@@ -107,7 +101,7 @@ export default function Speakers() {
         </div>
         {/* Speakers Grid */}
         <div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto"
+          className="grid grid-cols-3 gap-6 max-w-4xl mx-auto"
           data-aos="fade-left"
           data-aos-delay="500"
         >

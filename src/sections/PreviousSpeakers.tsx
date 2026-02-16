@@ -22,7 +22,7 @@ const previousSpeakers = [
     designation: "UI/UX Designer, Google",
     image: "/PrevSpeakers/Advin.webp",
     description:
-      "Advin Roy Netto, a UI/UX designer at Google, an educator, and a social media influencer, inspires many with his resilience and determination. His Fixing the Broken series reflects his dedication to social change through creative solutions.",
+      `Advin Roy Netto, a UI/UX designer at Google, an educator, and a social media influencer, inspires many with his resilience and determination. His "Fixing the Broken" series reflects his dedication to social change through creative solutions.`,
   },
   {
     name: "Jilu Joseph",
@@ -114,35 +114,35 @@ const previousSpeakers = [
     designation: "AI Engineer & Cybersecurity Specialist",
     image: "/PrevSpeakers/mufeed_vh.jpg.jpeg",
     description:
-      "Mufeed V H is the creator of Devika, an open-source alternative to Devin, and the CEO and Co-founder of Winfunc (YC S24), where he works on applying advanced AI reasoning capabilities to security audits. A cybersecurity specialist from Thrissur, Kerala, he has represented India at the WorldSkills Olympiad, earned a Bronze Medal at the BRICS Skills Olympiad, and won Gold at the IndiaSkills Nationals. He has reviewed and patched over 300 CVEs in open-source software and has contributed to securing major global organizations through responsible disclosure and bug bounty programs.",
+      "Mufeed V H is the creator of Devika and CEO and Co-founder of Winfunc (YC S24), where he brings AI and cybersecurity together. A WorldSkills representative and BRICS medallist, he has reviewed over 300 CVEs and built a strong track record in responsible disclosure.",
   },
   {
     name: "DR. V PILLAY",
     designation: "Medical Toxicologist & Forensic Medicine Specialist",
     image: "/PrevSpeakers/v_v_pillay.jpg.jpeg",
     description:
-      "Dr. V. V. Pillay is a senior medical toxicologist and forensic medicine specialist recognized for his contributions to the study and investigation of poisoning. He is the author of Modern Medical Toxicology and has been involved in several prominent forensic cases, including those featured in Curry and Cyanide. A recipient of the Lifetime Achievement Award and President of the Indian Society of Toxicology, he has published extensively and delivered lectures across India and internationally.",
+      "Dr. V. V. Pillay is a distinguished medical toxicologist and forensic expert, and author of Modern Medical Toxicology. Known for his work on major poisoning cases, including those featured in Curry and Cyanide, he has also led the Indian Society of Toxicology.",
   },
   {
     name: "NAYANA SHYAM",
     designation: "Director, Actor & Writer",
     image: "/PrevSpeakers/nayana_shyam.jpg.jpeg",
     description:
-      "Nayana Shyam is a director, actor, and writer known for her work in digital storytelling and web series. She directed the widely viewed Mother's Day special, Fashion Conversations With Mom, which garnered over forty million views on FilterCopy's YouTube channel. Hailing from Vennala, Kochi, her portfolio includes projects such as Firsts, and the second seasons of Adulting and Please Find Attached. She served as a creative editor at Netflix from 2020 to 2022, and later created the web series Sisterhood with TVF.",
+      "Nayana Shyam is a director, actor, and writer shaping digital storytelling. From the widely viewed Fashion Conversations With Mom to series like Firsts and Adulting (Season 2), she has built a dynamic portfolio, later creating Sisterhood with TVF after her time at Netflix.",
   },
   {
     name: "GOKUL GOPALAKRISHNAN",
     designation: "Comic Artist & Motor Vehicles Inspector",
     image: "/PrevSpeakers/gokul_gopalakrishnan.png",
     description:
-      "Gokul Gopalakrishnan is a motor vehicles inspector and comic artist from Thrissur. A graduate in Sociology with a Master's degree in English Literature, he is best known for his long-running comic strip Small Talk, published in The New Indian Express since 2009. His work has appeared in publications including Mint, Asian Age, Deccan Chronicle, DNA, Fountain Ink, and various comics anthologies. He is associated with Comix India, an alternative comics movement, and has written extensively on comic art for both academic and popular audiences.",
+      "Gokul Gopalakrishnan is a comic artist and motor vehicles inspector best known for his long-running strip Small Talk in The New Indian Express. His work spans leading national publications and India’s alternative comics scene.",
   },
   {
     name: "ANAND MADHUSOODANAN",
     designation: "Musician & Film Composer",
     image: "/PrevSpeakers/anand_madhu.jpg.jpeg",
     description:
-      "Anand Madhusoodanan is a musician and composer primarily known for his work in Malayalam cinema. Since his debut with Molly Aunty Rocks (2012), he has composed music for over a dozen films. He is widely recognized for his collaborations with writer-director Ranjith Sankar, contributing to films such as Pretham (2016), Punyalan Private Ltd. (2017), and Njan Marykutty (2018), all featuring Jayasurya in lead roles.",
+      "Anand Madhusoodanan is a Malayalam film composer who debuted with Molly Aunty Rocks (2012) and has since scored over a dozen films, including popular collaborations with Ranjith Sankar such as Pretham and Njan Marykutty.",
   },
 ];
 

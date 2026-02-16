@@ -7,14 +7,14 @@ const previousPerformers = [
     type: "Independent Musician",
     description:
       "Ashbel Peter, a crowd favourite and widely acclaimed independent musician, known for his harmonium expertise.",
-    image: "/performers/placeholder.jpg",
+    image: "/performers/ashbel.png",
     specialty: "Harmonium",
   },
   {
     name: "George Austin",
     type: "Guitarist",
     description: "George Austin, the lead guitarist of Rock Paper Scissors",
-    image: "/performers/placeholder.jpg",
+    image: "/performers/george.png",
     specialty: "Lead Guitar",
   },
   {
@@ -22,7 +22,7 @@ const previousPerformers = [
     type: "Classical Percussionist",
     description:
       "Sidharth Jedhu, popular tabla scholar from RLV College of Music and Fine Arts",
-    image: "/performers/placeholder.jpg",
+    image: "/performers/sidharth.png",
     specialty: "Tabla",
   },
   {
