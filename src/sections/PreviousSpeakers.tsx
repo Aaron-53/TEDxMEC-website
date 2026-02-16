@@ -266,7 +266,7 @@ export default function PreviousSpeakers() {
                   onClick={closeModal}
                   className="p-2 hover:bg-gray-100 rounded-full transition-colors"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5 text-tedx-charcoal" />
                 </button>
               </div>
               <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden bg-gray-100">

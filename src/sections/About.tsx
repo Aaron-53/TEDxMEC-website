@@ -38,7 +38,7 @@ export default function About() {
           </h2>
 
           <div
-            className="flex  gap-16"
+            className="flex flex-col sm:flex-row gap-16"
             data-aos="fade-up"
             data-aos-delay="400"
           >
