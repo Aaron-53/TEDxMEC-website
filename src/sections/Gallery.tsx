@@ -7,10 +7,6 @@ const allGalleryPhotos = [
     resizeOnHover: false,
   },
   {
-    src: "/gallery/WhatsApp Image 2026-02-12 at 5.14.11 PM.jpeg",
-    resizeOnHover: false,
-  },
-  {
     src: "/gallery/WhatsApp Image 2026-02-12 at 5.14.12 PM (1).jpeg",
     resizeOnHover: false,
   },
@@ -20,6 +16,10 @@ const allGalleryPhotos = [
   },
   {
     src: "/gallery/WhatsApp Image 2026-02-12 at 5.14.12 PM.jpeg",
+    resizeOnHover: false,
+  },
+  {
+    src: "/gallery/WhatsApp Image 2026-02-12 at 5.14.11 PM.jpeg",
     resizeOnHover: false,
   },
   {
