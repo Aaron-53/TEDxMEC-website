@@ -1,26 +1,29 @@
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Speakers', href: '#speakers' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Partners', href: '#partners' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Team', href: '#team' },
-  { label: 'Contact', href: '#contact' },
+  { label: "About", href: "#about" },
+  { label: "Speakers", href: "#speakers" },
+  { label: "Performances", href: "#performances" },
+  { label: "Previous Speakers", href: "#previous-speakers" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Team", href: "#team" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    
+
     const target = document.querySelector(href);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      target.scrollIntoView({ behavior: "smooth" });
     }
   };
 

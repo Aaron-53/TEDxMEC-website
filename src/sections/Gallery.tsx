@@ -2,121 +2,39 @@ import { useState } from "react";
 
 // All gallery photos from /gallery/ folder
 const allGalleryPhotos = [
-  {
-    src: "/gallery/WhatsApp Image 2026-02-12 at 5.14.11 PM (1).jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-12 at 5.14.12 PM (1).jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-12 at 5.14.12 PM (2).jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-12 at 5.14.12 PM.jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-12 at 5.14.11 PM.jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.10.41 AM (1).jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.10.41 AM.jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.10.42 AM (1).jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.10.42 AM (2).jpeg",
-    resizeOnHover: true,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.10.42 AM.jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.07 AM (1).jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.07 AM.jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.08 AM (1).jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.08 AM (2).jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.08 AM.jpeg",
-    resizeOnHover: false,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.09 AM (1).jpeg",
-    resizeOnHover: true,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.09 AM (2).jpeg",
-    resizeOnHover: true,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.09 AM (3).jpeg",
-    resizeOnHover: true,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.09 AM.jpeg",
-    resizeOnHover: true,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.10 AM (1).jpeg",
-    resizeOnHover: true,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.10 AM (2).jpeg",
-    resizeOnHover: true,
-  },
-  {
-    src: "/gallery/WhatsApp Image 2026-02-14 at 12.13.10 AM.jpeg",
-    resizeOnHover: true,
-  },
+  "/gallery/WhatsApp Image 2026-02-12 at 5.14.11 PM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-02-12 at 5.14.12 PM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-02-12 at 5.14.12 PM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-02-12 at 5.14.12 PM.jpeg",
+  "/gallery/WhatsApp Image 2026-02-12 at 5.14.11 PM.jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.10.41 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.10.41 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.10.42 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.10.42 AM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.10.42 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.07 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.07 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.08 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.08 AM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.08 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.09 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.09 AM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.09 AM (3).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.09 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.10 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.10 AM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-02-14 at 12.13.10 AM.jpeg",
 ];
-
-// Grid layout patterns for variety
-const gridLayouts = [
-  "col-span-2 row-span-1", // Wide rectangle
-  "col-span-1 row-span-1", // Small square
-  "col-span-1 row-span-1", // Small square
-  "col-span-1 row-span-1", // Small square
-];
-
-// Create gallery images with fixed order and layouts
-const galleryImages = allGalleryPhotos.map((photo, index) => ({
-  src: photo.src,
-  alt: `TEDxMEC Gallery Photo ${index + 1}`,
-  className: gridLayouts[index % gridLayouts.length],
-  resizeOnHover: photo.resizeOnHover,
-}));
 
 export default function Gallery() {
-  const [visibleCount, setVisibleCount] = useState(6);
+  const [visibleCount, setVisibleCount] = useState(7);
 
   const loadMore = () => {
-    setVisibleCount((prev) => Math.min(prev + 6, galleryImages.length));
+    setVisibleCount((prev) => Math.min(prev + 6, allGalleryPhotos.length));
   };
 
-  const visibleImages = galleryImages.slice(0, visibleCount);
-  const hasMore = visibleCount < galleryImages.length;
+  const visibleImages = allGalleryPhotos.slice(0, visibleCount);
+  const hasMore = visibleCount < allGalleryPhotos.length;
 
   return (
     <section
@@ -146,27 +64,20 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* Masonry Grid */}
+      {/* Gallery Grid */}
       <div
-        className="grid grid-cols-2 md:grid-cols-4 gap-3 auto-rows-[350px]"
+        className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4"
         data-aos="fade-up"
         data-aos-delay="500"
       >
-        {visibleImages.map((img, idx) => (
-          <div
-            key={idx}
-            className={`gallery-item relative overflow-hidden rounded-lg group ${img.className}`}
-          >
+        {visibleImages.map((src, idx) => (
+          <div key={idx} className="break-inside-avoid mb-4">
             <img
-              src={img.src}
-              alt={img.alt}
-              className={`w-full h-full object-cover object-center transition-all duration-700 ${
-                img.resizeOnHover
-                  ? "group-hover:object-contain group-hover:bg-black"
-                  : ""
-              }`}
+              src={src}
+              alt={`TEDxMEC Gallery Photo ${idx + 1}`}
+              className="w-full h-auto rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              loading="lazy"
             />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
           </div>
         ))}
       </div>
@@ -180,7 +91,8 @@ export default function Gallery() {
             data-aos="fade-up"
             data-aos-delay="800"
           >
-            Load More Photos
+            Load More Photos ({allGalleryPhotos.length - visibleCount}{" "}
+            remaining)
           </button>
         </div>
       )}
