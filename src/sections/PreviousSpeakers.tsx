@@ -211,7 +211,7 @@ export default function PreviousSpeakers() {
               className="speaker-card group cursor-pointer"
               onClick={() => openModal(speaker)}
               data-aos="zoom-in"
-              data-aos-delay={400 + idx * 100}
+              data-aos-delay={(idx % 5) * 100}
             >
               <div className="relative overflow-hidden rounded-lg mb-2 aspect-square bg-gray-900">
                 <img

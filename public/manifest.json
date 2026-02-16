@@ -1,0 +1,32 @@
+{
+  "name": "TEDxMEC",
+  "short_name": "TEDxMEC",
+  "description": "TEDxMEC 2026 - A New Chapter Awaits. Ideas Worth Spreading.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0C0F",
+  "theme_color": "#EB0028",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "events", "conferences"],
+  "lang": "en",
+  "scope": "/",
+  "id": "tedxmec-app"
+}

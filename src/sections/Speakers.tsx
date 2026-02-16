@@ -115,7 +115,7 @@ export default function Speakers() {
               }`}
               onClick={() => openModal(speaker)}
               data-aos="zoom-in"
-              data-aos-delay={600 + idx * 100}
+              data-aos-delay={(idx % 3) * 100}
             >
               <div className="relative overflow-hidden rounded-lg mb-4 aspect-square bg-gray-900">
                 {speaker.name === "Coming Soon" ? (

@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tedx.mec.ac.in/sitemap.xml
+
+# Disallow crawling of admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all search engines to crawl the site
+# This is the default behavior, but we're being explicit
+
+# Crawl-delay (optional, remove if not needed)
+# Crawl-delay: 1
