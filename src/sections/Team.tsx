@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import { useIsMobile } from '../hooks/use-mobile';
+
 const teamMembers = [
   {
     name: "Sahiba",
@@ -116,6 +119,13 @@ const teamMembers = [
 ];
 
 export default function Team() {
+  const isMobile = useIsMobile();
+  const [showAll, setShowAll] = useState(false);
+  
+  // On mobile, show only 4 cards initially, otherwise show all
+  const cardsToShow = isMobile && !showAll ? 4 : teamMembers.length;
+  const displayedMembers = teamMembers.slice(0, cardsToShow);
+  const hasMoreCards = isMobile && teamMembers.length > 4;
   return (
     <section
       className="relative z-[90] bg-tedx-charcoal py-24 px-[6vw]"
@@ -153,7 +163,7 @@ export default function Team() {
         data-aos="fade-up"
         data-aos-delay="400"
       >
-        {teamMembers.map((member, idx) => (
+        {displayedMembers.map((member, idx) => (
           <div
             key={idx}
             className="team-card group"
@@ -177,6 +187,30 @@ export default function Team() {
           </div>
         ))}
       </div>
+
+      {/* Load More Button - Only show on mobile when there are more cards */}
+      {hasMoreCards && !showAll && (
+        <div className="flex justify-center mt-8" data-aos="fade-up" data-aos-delay="500">
+          <button
+            onClick={() => setShowAll(true)}
+            className="px-6 py-3 bg-tedx-red hover:bg-red-700 text-tedx-white font-sora font-semibold rounded-lg transition-colors duration-200 flex items-center gap-2"
+          >
+            Load More
+            <svg 
+              width="16" 
+              height="16" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+        </div>
+      )}
     </section>
   );
 }
