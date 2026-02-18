@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useIsMobile } from '../hooks/use-mobile';
+import { useState } from "react";
+import { useIsMobile } from "../hooks/use-mobile";
 
 const teamMembers = [
   {
@@ -121,7 +121,7 @@ const teamMembers = [
 export default function Team() {
   const isMobile = useIsMobile();
   const [showAll, setShowAll] = useState(false);
-  
+
   // On mobile, show only 4 cards initially, otherwise show all
   const cardsToShow = isMobile && !showAll ? 4 : teamMembers.length;
   const displayedMembers = teamMembers.slice(0, cardsToShow);
@@ -190,23 +190,27 @@ export default function Team() {
 
       {/* Load More Button - Only show on mobile when there are more cards */}
       {hasMoreCards && !showAll && (
-        <div className="flex justify-center mt-8" data-aos="fade-up" data-aos-delay="500">
+        <div
+          className="flex justify-center mt-8"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
           <button
             onClick={() => setShowAll(true)}
             className="px-6 py-3 bg-tedx-red hover:bg-red-700 text-tedx-white font-sora font-semibold rounded-lg transition-colors duration-200 flex items-center gap-2"
           >
             Load More
-            <svg 
-              width="16" 
-              height="16" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
               strokeLinejoin="round"
             >
-              <path d="M6 9l6 6 6-6"/>
+              <path d="M6 9l6 6 6-6" />
             </svg>
           </button>
         </div>
