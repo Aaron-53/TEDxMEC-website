@@ -68,7 +68,7 @@ export default function About() {
 
             {/* <div className="bg-tedx-black/30 backdrop-blur-sm rounded-lg p-6 border border-tedx-white/10">
               <h3 className="text-tedx-red font-semibold mb-3 text-sm uppercase tracking-wider">
-                This Year's Theme: Luminality
+                This Year's Theme: Liminality
               </h3>
               <p className="text-tedx-white/90 text-sm leading-relaxed">
                 <span className="text-tedx-red font-medium">Luminality</span>{" "}
