@@ -66,17 +66,17 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-tedx-black/30 backdrop-blur-sm rounded-lg p-6 border border-tedx-white/10">
+           <div className="bg-tedx-black/30 backdrop-blur-sm rounded-lg p-6 border border-tedx-white/10">
   <h3 className="text-tedx-red font-semibold mb-3 text-sm uppercase tracking-wider">
-    This Year's Theme: Liminality
+    This Year's Theme
   </h3>
   <p className="text-tedx-white/90 text-sm leading-relaxed">
-    <span className="text-tedx-red font-medium">Liminality</span> represents the in-between — the moment of transition where certainty fades and possibility emerges. It is where a spark gathers courage and transforms into a flame.
-    <br /><br />
-    In a rapidly changing world, the most profound shifts happen not at clear destinations, but in the uncharted space between what was and what will be. This year, we invite you to embrace the unknown, explore new perspectives, and discover the potential within moments of change.
+    Liminality explores the space between where we are and where we are going.
+    It represents moments of transition, growth, and transformation. This
+    theme encourages us to reflect on change, embrace uncertainty, and
+    recognize the opportunities that exist in periods of becoming.
   </p>
 </div>
-          </div>
 
           <div className="text-center mt-8">
             <a
