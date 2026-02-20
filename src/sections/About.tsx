@@ -77,6 +77,7 @@ export default function About() {
     recognize the opportunities that exist in periods of becoming.
   </p>
 </div>
+          </div>
 
           <div className="text-center mt-8">
             <a
