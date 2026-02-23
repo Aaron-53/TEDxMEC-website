@@ -1,5 +1,5 @@
 import PlasmaHero from "@/components/plasma";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -23,13 +23,16 @@ export default function Hero() {
         <span className="text-lg sm:text-xl font-bold mb-8">
           Ideas <span className="font-light">Worth</span> Spreading.
         </span>
-        <div className="hidden lg:flex items-center gap-8 mt-2">
-          <Link
-            to="/tickets"
-            className="px-6 py-3 bg-tedx-red text-white font-bold text-sm uppercase tracking-wider rounded-md hover:shadow-glow transition-all hover:bg-tedx-red/90"
+        <div className="hidden lg:flex flex-col items-center gap-4 mt-2">
+          <button
+            disabled
+            className="px-6 py-3 bg-tedx-gray/20 text-tedx-gray font-bold text-sm uppercase tracking-wider rounded-md cursor-not-allowed border border-tedx-gray/30"
           >
-            Get Your Tickets Now
-          </Link>
+            Early Bird Tickets Sold Out
+          </button>
+          <p className="text-xs text-tedx-gray font-mono uppercase tracking-wider">
+            Tickets Release Soon
+          </p>
         </div>
       </div>
     </section>

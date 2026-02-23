@@ -1,22 +1,22 @@
 import { Sparkles, Users, Briefcase, Clock } from "lucide-react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const ticketTiers = [
   {
     name: "MECians",
-    price: "₹799",
+    price: "₹XXX",
     icon: Users,
     popular: false,
   },
   {
     name: "Ex-MECians",
-    price: "₹999",
+    price: "₹XXX",
     icon: Sparkles,
     popular: false,
   },
   {
     name: "Others",
-    price: "₹1,299",
+    price: "₹XXX",
     icon: Briefcase,
     popular: false,
   },
@@ -38,26 +38,33 @@ export default function Tickets() {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          SECURE YOUR <span className="text-tedx-red">SEAT</span>
+          EARLY BIRD <span className="text-tedx-red">SOLD OUT!</span>
         </h2>
         <p
           className="body-text max-w-xl mx-auto mb-6"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Early Bird special pricing - Choose the experience that suits you best
-          and be part of something extraordinary.
+          All 20 Early Bird tickets have been snapped up! Don't miss out when
+          the main ticket sale opens.
         </p>
         <div
-          className="inline-flex items-center gap-2 px-4 py-2 bg-tedx-red/10 border border-tedx-red/30 rounded-full"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full mb-4"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <Clock className="w-4 h-4 text-tedx-red" />
-          <span className="font-mono text-xs text-tedx-red uppercase tracking-wider">
-            Only 20 Early Bird Tickets Available
+          <Clock className="w-4 h-4 text-orange-500" />
+          <span className="font-mono text-xs text-orange-500 uppercase tracking-wider">
+            Main Tickets Release Soon
           </span>
         </div>
+        <p
+          className="text-tedx-gray text-sm max-w-md mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          Be the first to know when tickets go live. The demand is incredible!
+        </p>
       </div>
 
       {/* Ticket Cards */}
@@ -104,16 +111,12 @@ export default function Tickets() {
               <span className="text-tedx-gray text-sm">/person</span>
             </div>
 
-            <Link
-              to="/tickets"
-              className={`block w-full py-3 rounded-md font-sora font-semibold text-sm uppercase tracking-wider transition-all duration-300 text-center ${
-                tier.popular
-                  ? "bg-tedx-red text-white hover:shadow-glow"
-                  : "bg-tedx-white/10 text-tedx-white hover:bg-tedx-white/20"
-              }`}
+            <button
+              disabled
+              className="block w-full py-3 rounded-md font-sora font-semibold text-sm uppercase tracking-wider transition-all duration-300 text-center bg-tedx-gray/20 text-tedx-gray cursor-not-allowed border border-tedx-gray/30"
             >
-              Get {tier.name} Ticket
-            </Link>
+              Coming Soon
+            </button>
           </div>
         ))}
       </div>
