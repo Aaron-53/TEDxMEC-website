@@ -6,13 +6,13 @@ const currentSpeakers = [
   {
     name: "Sreekanth K G",
     topic: "English Pronunciation Coach",
-    bio: "An inspiring science educator who makes complex scientific concepts accessible and engaging for learners of all ages.",
+    bio: `Sreekanth KG, a Communication and Accent Specialist, is the architect of "Voice of Sreek". Through his "Broken English" initiative, he provides a structured, practice-driven curriculum to a global community of over one million followers, integrating core linguistic principles with real-world application.`,
     image: "/speakers/sreekanth.jpeg",
   },
   {
     name: "Akhil R",
     topic: "Science Educator & Content Creator",
-    bio: "A professional accent coach helping individuals master communication skills and build confidence through effective speech training.",
+    bio: `Akhil R is the creative force behind "Scientific Thinking 2357," a thriving science-focused digital platform based in Ernakulam, India. He is known for translating intricate theories into relatable insights for learners of all ages, using short-form content to demystify science through logic and evidence.`,
     image: "/speakers/akhil.jpeg",
   },
   {
