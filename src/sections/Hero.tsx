@@ -2,17 +2,6 @@ import PlasmaHero from "@/components/plasma";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) => {
-    e.preventDefault();
-
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   return (
     <section
       className="relative min-h-screen h-screen w-full z-10 flex items-center justify-center bg-transparent overflow-hidden"
