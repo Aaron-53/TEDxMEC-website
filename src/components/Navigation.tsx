@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -57,13 +58,12 @@ export default function Navigation() {
               ))}
             </div>
             <div className="hidden lg:flex items-center gap-8">
-              {/* <a
-                href="#tickets"
-                onClick={(e) => handleNavClick(e, "#tickets")}
+              <Link
+                to="/tickets"
                 className="px-4 py-2 bg-tedx-red text-white font-mono text-xs uppercase tracking-wider rounded-md hover:shadow-glow transition-all"
               >
                 Get Tickets
-              </a> */}
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -107,9 +107,8 @@ export default function Navigation() {
               {link.label}
             </a>
           ))}
-          {/* <a
-            href="#tickets"
-            onClick={(e) => handleNavClick(e, "#tickets")}
+          <Link
+            to="/tickets"
             className="mt-4 px-8 py-4 bg-tedx-red text-white font-sora font-semibold uppercase tracking-wider rounded-md"
             style={{
               transitionDelay: isMobileMenuOpen
@@ -122,7 +121,7 @@ export default function Navigation() {
             }}
           >
             Get Tickets
-          </a> */}
+          </Link>
         </div>
       </div>
     </div>

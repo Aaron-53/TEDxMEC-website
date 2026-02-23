@@ -1,46 +1,23 @@
-import { Check, Sparkles, Users, Briefcase } from "lucide-react";
+import { Sparkles, Users, Briefcase, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ticketTiers = [
   {
-    name: "Student",
-    price: "₹499",
+    name: "MECians",
+    price: "₹799",
     icon: Users,
-    features: [
-      "Full day access to all talks",
-      "Networking sessions",
-      "Workshop participation",
-      "Digital certificate",
-      "Lunch & refreshments",
-    ],
     popular: false,
   },
   {
-    name: "General",
-    price: "₹799",
+    name: "Ex-MECians",
+    price: "₹999",
     icon: Sparkles,
-    features: [
-      "Full day access to all talks",
-      "Priority seating",
-      "Networking sessions",
-      "Workshop participation",
-      "Digital certificate",
-      "Lunch & refreshments",
-      "TEDxMEC merchandise",
-    ],
-    popular: true,
+    popular: false,
   },
   {
-    name: "Professional",
+    name: "Others",
     price: "₹1,299",
     icon: Briefcase,
-    features: [
-      "Everything in General",
-      "VIP front-row seating",
-      "Exclusive speaker meet",
-      "Premium merchandise kit",
-      "After-event dinner",
-      "1-year TED community access",
-    ],
     popular: false,
   },
 ];
@@ -54,7 +31,7 @@ export default function Tickets() {
       {/* Section Header */}
       <div className="text-center mb-16">
         <span className="micro-label mb-4 block" data-aos="fade-up">
-          TICKETS
+          EARLY BIRD TICKETS
         </span>
         <h2
           className="headline-lg text-tedx-white mb-4"
@@ -64,21 +41,21 @@ export default function Tickets() {
           SECURE YOUR <span className="text-tedx-red">SEAT</span>
         </h2>
         <p
-          className="body-text max-w-xl mx-auto"
+          className="body-text max-w-xl mx-auto mb-6"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Limited seats available. Choose the experience that suits you best and
-          be part of something extraordinary.
+          Early Bird special pricing - Choose the experience that suits you best
+          and be part of something extraordinary.
         </p>
         <div
-          className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-tedx-red/10 border border-tedx-red/30 rounded-full"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-tedx-red/10 border border-tedx-red/30 rounded-full"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <span className="w-2 h-2 bg-tedx-red rounded-full animate-pulse" />
+          <Clock className="w-4 h-4 text-tedx-red" />
           <span className="font-mono text-xs text-tedx-red uppercase tracking-wider">
-            Limited Seats Available
+            Only 20 Early Bird Tickets Available
           </span>
         </div>
       </div>
@@ -127,30 +104,16 @@ export default function Tickets() {
               <span className="text-tedx-gray text-sm">/person</span>
             </div>
 
-            {/* Features */}
-            <ul className="space-y-3 mb-8">
-              {tier.features.map((feature, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <Check
-                    className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                      tier.popular ? "text-tedx-red" : "text-tedx-gray"
-                    }`}
-                  />
-                  <span className="text-sm text-tedx-gray">{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* CTA Button */}
-            <button
-              className={`w-full py-3 rounded-md font-sora font-semibold text-sm uppercase tracking-wider transition-all duration-300 ${
+            <Link
+              to="/tickets"
+              className={`block w-full py-3 rounded-md font-sora font-semibold text-sm uppercase tracking-wider transition-all duration-300 text-center ${
                 tier.popular
                   ? "bg-tedx-red text-white hover:shadow-glow"
                   : "bg-tedx-white/10 text-tedx-white hover:bg-tedx-white/20"
               }`}
             >
               Get {tier.name} Ticket
-            </button>
+            </Link>
           </div>
         ))}
       </div>

@@ -4,16 +4,16 @@ import { X } from "lucide-react";
 // Current speakers for 2025
 const currentSpeakers = [
   {
-    name: "Coming Soon",
-    topic: "Speaker Announcement",
-    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
-    image: "/speakers/placeholder.jpg",
+    name: "Sreekanth K G",
+    topic: "English Pronunciation Coach",
+    bio: "An inspiring science educator who makes complex scientific concepts accessible and engaging for learners of all ages.",
+    image: "/speakers/sreekanth.jpeg",
   },
   {
-    name: "Coming Soon",
-    topic: "Speaker Announcement",
-    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
-    image: "/speakers/placeholder.jpg",
+    name: "Akhil R",
+    topic: "Science Educator & Content Creator",
+    bio: "A professional accent coach helping individuals master communication skills and build confidence through effective speech training.",
+    image: "/speakers/akhil.jpeg",
   },
   {
     name: "Coming Soon",
@@ -101,7 +101,7 @@ export default function Speakers() {
         </div>
         {/* Speakers Grid */}
         <div
-          className="grid grid-cols-3 gap-6 max-w-4xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-sm sm:max-w-2xl lg:max-w-4xl mx-auto"
           data-aos="fade-left"
           data-aos-delay="500"
         >
@@ -117,21 +117,21 @@ export default function Speakers() {
               data-aos="zoom-in"
               data-aos-delay={(idx % 3) * 100}
             >
-              <div className="relative overflow-hidden rounded-lg mb-4 aspect-square bg-gray-900">
+              <div className="relative overflow-hidden rounded-lg mb-3 sm:mb-4 aspect-square bg-gray-900">
                 {speaker.name === "Coming Soon" ? (
                   <div className="w-full h-full flex items-center justify-center bg-tedx-black/50 border border-tedx-white/20">
                     <div className="text-center">
-                      <span className="text-tedx-white/30 text-4xl mb-2 block">
+                      <span className="text-tedx-white/30 text-3xl sm:text-4xl mb-2 block">
                         ?
                       </span>
                       <div className="flex justify-center gap-1">
-                        <span className="w-2 h-2 bg-tedx-red rounded-full animate-pulse"></span>
+                        <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-tedx-red rounded-full animate-pulse"></span>
                         <span
-                          className="w-2 h-2 bg-tedx-red/60 rounded-full animate-pulse"
+                          className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-tedx-red/60 rounded-full animate-pulse"
                           style={{ animationDelay: "0.2s" }}
                         ></span>
                         <span
-                          className="w-2 h-2 bg-tedx-red/40 rounded-full animate-pulse"
+                          className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-tedx-red/40 rounded-full animate-pulse"
                           style={{ animationDelay: "0.4s" }}
                         ></span>
                       </div>
@@ -146,7 +146,7 @@ export default function Speakers() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-tedx-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-tedx-red text-white px-4 py-2 rounded-md text-sm font-medium">
+                      <div className="bg-tedx-red text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-md text-xs sm:text-sm font-medium">
                         Click to Read More
                       </div>
                     </div>
@@ -154,10 +154,10 @@ export default function Speakers() {
                 )}
               </div>
               <div className="text-center">
-                <h3 className="font-sora font-semibold text-tedx-white mb-2">
+                <h3 className="font-sora font-semibold text-tedx-white mb-1 sm:mb-2 text-sm sm:text-base">
                   {speaker.name}
                 </h3>
-                <p className="text-tedx-red text-sm font-medium mb-1">
+                <p className="text-tedx-red text-xs sm:text-sm font-medium mb-1">
                   {speaker.topic}
                 </p>
               </div>

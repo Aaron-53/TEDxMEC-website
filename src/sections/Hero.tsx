@@ -1,4 +1,6 @@
 import PlasmaHero from "@/components/plasma";
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -33,14 +35,12 @@ export default function Hero() {
           Ideas <span className="font-light">Worth</span> Spreading.
         </span>
         <div className="hidden lg:flex items-center gap-8 mt-2">
-          <a
-            href="#tickets"
-            onClick={(e) => handleNavClick(e, "#tickets")}
+          <Link
+            to="/tickets"
             className="px-6 py-3 bg-tedx-red text-white font-bold text-sm uppercase tracking-wider rounded-md hover:shadow-glow transition-all hover:bg-tedx-red/90"
           >
-            <span className="font-bold">Tickets Coming Soon...</span> 
-            {/* <span className="font-light">Get</span> Tickets */}
-          </a>
+            Get Your Tickets Now
+          </Link>
         </div>
       </div>
     </section>
