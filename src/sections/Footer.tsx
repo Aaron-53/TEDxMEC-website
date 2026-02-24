@@ -71,6 +71,24 @@ export default function Footer() {
                 <span className="font-medium">+91 81380 77600</span>
               </a>
 
+              {/* Event Details */}
+              <div className="pt-4 border-t border-gray-200">
+                <h4 className="font-semibold text-gray-900 mb-3">
+                  Event Details
+                </h4>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <p>
+                    <strong>Date:</strong> March 7, 2026
+                  </p>
+                  <p>
+                    <strong>Time:</strong> 12PM - 8PM
+                  </p>
+                  <p>
+                    <strong>Venue:</strong> Lulu Cyber Tower 2, Audi - 2
+                  </p>
+                </div>
+              </div>
+
               {/* <div className="flex items-center gap-4 text-gray-700">
                 <div className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
                   <MapPin className="w-5 h-5" />

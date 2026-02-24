@@ -16,10 +16,10 @@ const currentSpeakers = [
     image: "/speakers/akhil.jpeg",
   },
   {
-    name: "Coming Soon",
-    topic: "Speaker Announcement",
-    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
-    image: "/speakers/placeholder.jpg",
+    name: "Chai Couple",
+    topic: "Entrepreneurs",
+    bio: "From corporate careers abroad to a shared dream brewed over tea, Sreelakshmi and Saran are the hearts behind The Chai Couple. Through their signature bun maska and a community of over 159K, they prove that entrepreneurship is rooted in courage and connection.",
+    image: "/speakers/chai_couple.jpeg",
   },
   {
     name: "Coming Soon",

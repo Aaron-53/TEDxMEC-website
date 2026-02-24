@@ -23,6 +23,7 @@ export default function Hero() {
         <span className="text-lg sm:text-xl font-bold mb-8">
           Ideas <span className="font-light">Worth</span> Spreading.
         </span>
+
         <div className="hidden lg:flex flex-col items-center gap-4 mt-2">
           <button
             disabled

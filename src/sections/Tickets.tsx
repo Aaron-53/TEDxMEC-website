@@ -40,6 +40,15 @@ export default function Tickets() {
         >
           EARLY BIRD <span className="text-tedx-red">SOLD OUT!</span>
         </h2>
+
+        {/* Event Details */}
+        <div className="mb-6 space-y-1" data-aos="fade-up" data-aos-delay="150">
+          <p className="text-tedx-white font-semibold text-lg">
+            March 7, 2026 • 12PM - 8PM
+          </p>
+          <p className="text-tedx-gray text-sm">Lulu Cyber Tower 2, Audi - 2</p>
+        </div>
+
         <p
           className="body-text max-w-xl mx-auto mb-6"
           data-aos="fade-up"
