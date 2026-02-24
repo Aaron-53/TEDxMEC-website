@@ -1,22 +1,22 @@
 import { Sparkles, Users, Briefcase, Clock } from "lucide-react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ticketTiers = [
   {
     name: "MECians",
-    price: "₹XXX",
+    price: "₹899",
     icon: Users,
     popular: false,
   },
   {
     name: "Ex-MECians",
-    price: "₹XXX",
+    price: "₹1299",
     icon: Sparkles,
     popular: false,
   },
   {
     name: "Others",
-    price: "₹XXX",
+    price: "₹1599",
     icon: Briefcase,
     popular: false,
   },
@@ -31,14 +31,14 @@ export default function Tickets() {
       {/* Section Header */}
       <div className="text-center mb-16">
         <span className="micro-label mb-4 block" data-aos="fade-up">
-          EARLY BIRD TICKETS
+          TICKETS NOW LIVE
         </span>
         <h2
           className="headline-lg text-tedx-white mb-4"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          EARLY BIRD <span className="text-tedx-red">SOLD OUT!</span>
+          SECURE YOUR <span className="text-tedx-red">SEAT</span>
         </h2>
 
         {/* Event Details */}
@@ -54,17 +54,17 @@ export default function Tickets() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          All 20 Early Bird tickets have been snapped up! Don't miss out when
-          the main ticket sale opens.
+          Join us for an unforgettable day of inspiring talks and ideas worth
+          spreading. Choose the ticket that suits you best!
         </p>
         <div
-          className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full mb-4"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-tedx-red/10 border border-tedx-red/30 rounded-full mb-4"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <Clock className="w-4 h-4 text-orange-500" />
-          <span className="font-mono text-xs text-orange-500 uppercase tracking-wider">
-            Main Tickets Release Soon
+          <Clock className="w-4 h-4 text-tedx-red" />
+          <span className="font-mono text-xs text-tedx-red uppercase tracking-wider">
+            Limited Seats Available
           </span>
         </div>
         <p
@@ -72,7 +72,7 @@ export default function Tickets() {
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          Be the first to know when tickets go live. The demand is incredible!
+          Don't miss your chance to be part of TEDxMEC 2026!
         </p>
       </div>
 
@@ -120,12 +120,16 @@ export default function Tickets() {
               <span className="text-tedx-gray text-sm">/person</span>
             </div>
 
-            <button
-              disabled
-              className="block w-full py-3 rounded-md font-sora font-semibold text-sm uppercase tracking-wider transition-all duration-300 text-center bg-tedx-gray/20 text-tedx-gray cursor-not-allowed border border-tedx-gray/30"
+            <Link
+              to="/tickets"
+              className={`block w-full py-3 rounded-md font-sora font-semibold text-sm uppercase tracking-wider transition-all duration-300 text-center ${
+                tier.popular
+                  ? "bg-tedx-red text-white hover:shadow-glow"
+                  : "bg-tedx-white/10 text-tedx-white hover:bg-tedx-white/20"
+              }`}
             >
-              Coming Soon
-            </button>
+              Get {tier.name} Ticket
+            </Link>
           </div>
         ))}
       </div>

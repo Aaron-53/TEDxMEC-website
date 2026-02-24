@@ -48,7 +48,7 @@ export default function TicketFormPage() {
               TEDxMEC <span className="text-tedx-red">2026</span>
             </h2>
             <p className="text-tedx-gray text-lg">
-              Early Bird Registration - Only 20 Tickets Available
+              Ticket Registration - Limited Seats Available
             </p>
           </div>
 

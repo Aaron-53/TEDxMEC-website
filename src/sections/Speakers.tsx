@@ -22,10 +22,10 @@ const currentSpeakers = [
     image: "/speakers/chai_couple.jpeg",
   },
   {
-    name: "Coming Soon",
-    topic: "Speaker Announcement",
-    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
-    image: "/speakers/placeholder.jpg",
+    name: "Christo Xavier",
+    topic: "Music Composer",
+    bio: "Christo Xavier is an Indian music composer and singer best known for his atmospheric scores in Malayalam cinema. He gained widespread acclaim and a Kerala State Film Award for his innovative work on the 2024 film Bramayugam.",
+    image: "/speakers/christo.jpeg",
   },
   {
     name: "Coming Soon",

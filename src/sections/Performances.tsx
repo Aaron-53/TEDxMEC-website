@@ -76,7 +76,7 @@ export default function Performances() {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            LIVE <span className="text-tedx-red">PERFORMANCES</span>
+            PAST <span className="text-tedx-red">PERFORMANCES</span>
           </h2>
           <p
             className="body-text max-w-2xl mx-auto text-tedx-white/80 text-lg"
