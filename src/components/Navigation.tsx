@@ -36,12 +36,8 @@ export default function Navigation() {
         >
           <div className="flex items-center justify-between px-10 py-4">
             {/* Logo */}
-            <a href="#hero" className="flex items-center gap-2">
-              <img
-                src="/tedxmec white.svg"
-                alt="TEDxMEC"
-                className="h-8 w-auto"
-              />
+            <a href="#hero" className="flex items-center justify-center gap-2">
+              <img src="/tedlogowhite.png" alt="TEDxMEC" className="h-8 w-auto" />
             </a>
 
             {/* Desktop Nav */}
@@ -58,12 +54,12 @@ export default function Navigation() {
               ))}
             </div>
             <div className="hidden lg:flex items-center gap-8">
-               <Link
+              <Link
                 to="/tickets"
                 className="px-4 py-2 bg-tedx-red text-white font-mono text-xs uppercase tracking-wider rounded-md hover:shadow-glow transition-all"
               >
                 Get Tickets
-              </Link> 
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
