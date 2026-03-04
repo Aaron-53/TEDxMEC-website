@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col justify-center items-center text-center px-4">
         <span className="text-4xl sm:text-5xl lg:text-6xl font-light mb-2">
           <span className="font-bold text-red-600">
-            TED<sup className="text-2xl lg:text-3xl">X</sup>
+            TED<sup className="text-2xl lg:text-3xl font-[]">X</sup>
           </span>
           MEC
         </span>

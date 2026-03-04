@@ -28,16 +28,16 @@ const currentSpeakers = [
     image: "/speakers/christo.jpeg",
   },
   {
-    name: "Coming Soon",
-    topic: "Speaker Announcement",
-    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
-    image: "/speakers/placeholder.jpg",
+    name: "Arun Murali",
+    topic: "Financial Educator & Entrepreneur",
+    bio: "Arun Murali is a finance educator, trader and entrepreneur who is also the Founder of Trademax, a platform dedicated to financial literacy and smart trading education. With a clear entrepreneurial vision, he empowers aspiring traders by simplifying market strategies and promoting disciplined investing.",
+    image: "/speakers/arun.JPEG",
   },
   {
-    name: "Coming Soon",
-    topic: "Speaker Announcement",
-    bio: "Stay tuned as we reveal more inspiring voices who will share transformative ideas worth spreading.",
-    image: "/speakers/placeholder.jpg",
+    name: "Anas Rahman Junaid",
+    topic: "Entrepreneur",
+    bio: "Anas Rahman Junaid is a Fortune 40 Under 40 researcher, entrepreneur and investor at the intersection of capital and impact. As the Founder of Hurun India, he is the leading authority on Indian wealth and entrepreneurship, and through Callapina Capital, he actively fuels the next generation of bold ventures.",
+    image: "/speakers/anas.jpeg",
   },
 ];
 

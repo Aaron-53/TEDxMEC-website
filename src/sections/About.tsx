@@ -34,7 +34,10 @@ export default function About() {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            ABOUT <span className="text-tedx-red">TEDxMEC</span>
+            ABOUT{" "}
+            <span className="text-tedx-red">
+              TED<span className="text-[40px] relative -top-1">x</span>MEC
+            </span>
           </h2>
 
           <div
@@ -44,7 +47,8 @@ export default function About() {
           >
             <div className="bg-tedx-black/30 backdrop-blur-sm rounded-lg p-6 border border-tedx-white/10">
               <h3 className="text-tedx-red font-semibold mb-3 text-sm uppercase tracking-wider">
-                What is TEDx?
+                What is TED
+                <span className="text-[10px] relative">x</span>?
               </h3>
               <p className="text-tedx-white/90 text-sm leading-relaxed">
                 TEDx brings the spirit of TED's "ideas worth spreading" to local
@@ -66,17 +70,18 @@ export default function About() {
               </p>
             </div>
 
-           <div className="bg-tedx-black/30 backdrop-blur-sm rounded-lg p-6 border border-tedx-white/10">
-  <h3 className="text-tedx-red font-semibold mb-3 text-sm uppercase tracking-wider">
-    This Year's Theme
-  </h3>
-  <p className="text-tedx-white/90 text-sm leading-relaxed">
-    Liminality explores the space between where we are and where we are going.
-    It represents moments of transition, growth, and transformation. This
-    theme encourages us to reflect on change, embrace uncertainty, and
-    recognize the opportunities that exist in periods of becoming.
-  </p>
-</div>
+            <div className="bg-tedx-black/30 backdrop-blur-sm rounded-lg p-6 border border-tedx-white/10">
+              <h3 className="text-tedx-red font-semibold mb-3 text-sm uppercase tracking-wider">
+                This Year's Theme
+              </h3>
+              <p className="text-tedx-white/90 text-sm leading-relaxed">
+                Liminality explores the space between where we are and where we
+                are going. It represents moments of transition, growth, and
+                transformation. This theme encourages us to reflect on change,
+                embrace uncertainty, and recognize the opportunities that exist
+                in periods of becoming.
+              </p>
+            </div>
           </div>
 
           <div className="text-center mt-8">
