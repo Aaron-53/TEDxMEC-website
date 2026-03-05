@@ -9,6 +9,12 @@ const ticketTiers = [
     popular: false,
   },
   {
+    name: "School Students",
+    price: "₹1099",
+    icon: Users,
+    popular: false,
+  },
+  {
     name: "Ex-MECians",
     price: "₹1299",
     icon: Sparkles,
@@ -78,7 +84,7 @@ export default function Tickets() {
 
       {/* Ticket Cards */}
       <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto"
         data-aos="fade-up"
         data-aos-delay="400"
       >
