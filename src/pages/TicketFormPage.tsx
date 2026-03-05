@@ -10,6 +10,12 @@ export default function TicketFormPage() {
       description: "Current MEC students",
     },
     {
+      id: "student",
+      name: "School Students",
+      price: 1099,
+      description: "School students",
+    },
+    {
       id: "ex-mecians",
       name: "Ex-MECians",
       price: 1299,
