@@ -11,9 +11,9 @@ export default function TicketFormPage() {
     },
     {
       id: "student",
-      name: "School Students",
+      name: "Students",
       price: 1099,
-      description: "School students",
+      description: "students",
     },
     {
       id: "ex-mecians",
