@@ -27,18 +27,18 @@ const currentSpeakers = [
     bio: "Christo Xavier is an Indian music composer and singer best known for his atmospheric scores in Malayalam cinema. He gained widespread acclaim and a Kerala State Film Award for his innovative work on the 2024 film Bramayugam.",
     image: "/speakers/christo.jpeg",
   },
-  {
-    name: "Arun Murali",
-    topic: "Financial Educator & Entrepreneur",
-    bio: "Arun Murali is a finance educator, trader and entrepreneur who is also the Founder of Trademax, a platform dedicated to financial literacy and smart trading education. With a clear entrepreneurial vision, he empowers aspiring traders by simplifying market strategies and promoting disciplined investing.",
-    image: "/speakers/arun.JPEG",
-  },
-  {
-    name: "Anas Rahman Junaid",
-    topic: "Entrepreneur",
-    bio: "Anas Rahman Junaid is a Fortune 40 Under 40 researcher, entrepreneur and investor at the intersection of capital and impact. As the Founder of Hurun India, he is the leading authority on Indian wealth and entrepreneurship, and through Callapina Capital, he actively fuels the next generation of bold ventures.",
-    image: "/speakers/anas.jpeg",
-  },
+  // {
+  //   name: "Arun Murali",
+  //   topic: "Financial Educator & Entrepreneur",
+  //   bio: "Arun Murali is a finance educator, trader and entrepreneur who is also the Founder of Trademax, a platform dedicated to financial literacy and smart trading education. With a clear entrepreneurial vision, he empowers aspiring traders by simplifying market strategies and promoting disciplined investing.",
+  //   image: "/speakers/arun.JPEG",
+  // },
+  // {
+  //   name: "Anas Rahman Junaid",
+  //   topic: "Entrepreneur",
+  //   bio: "Anas Rahman Junaid is a Fortune 40 Under 40 researcher, entrepreneur and investor at the intersection of capital and impact. As the Founder of Hurun India, he is the leading authority on Indian wealth and entrepreneurship, and through Callapina Capital, he actively fuels the next generation of bold ventures.",
+  //   image: "/speakers/anas.jpeg",
+  // },
 ];
 
 export default function Speakers() {
@@ -101,7 +101,7 @@ export default function Speakers() {
         </div>
         {/* Speakers Grid */}
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-sm sm:max-w-2xl lg:max-w-4xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2  gap-4 sm:gap-6 max-w-sm sm:max-w-2xl lg:max-w-4xl mx-auto"
           data-aos="fade-left"
           data-aos-delay="500"
         >
@@ -117,7 +117,7 @@ export default function Speakers() {
               data-aos="zoom-in"
               data-aos-delay={(idx % 3) * 100}
             >
-              <div className="relative overflow-hidden rounded-lg mb-3 sm:mb-4 aspect-square bg-gray-900">
+              <div className="relative overflow-hidden rounded-lg mb-3 sm:mb-4 sm:w-3/4 sm:mx-auto aspect-square bg-gray-900">
                 {speaker.name === "Coming Soon" ? (
                   <div className="w-full h-full flex items-center justify-center bg-tedx-black/50 border border-tedx-white/20">
                     <div className="text-center">
